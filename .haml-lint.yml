@@ -1,0 +1,10 @@
+exclude:
+  - vendor/**/*
+  - app/views/layouts/mailer.html.haml
+
+linters:
+
+  LineLength:
+    max: 200
+  ViewLength:
+    max: 200

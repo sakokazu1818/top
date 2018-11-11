@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.4"
+  },
+  "devDependencies": {
+    "stylelint": "^9.6.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.3.1"
+  },
+  "scripts": {
+    "lint:stylesheet": "stylelint --fix app/assets/stylesheets/**/*.scss"
+  }
+}

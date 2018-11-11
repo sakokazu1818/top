@@ -1,0 +1,78 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+@import "bootstrap";
+
+body,
+html {
+  height: 100%;
+
+  .jumbotron-text {
+    position: absolute;
+    font-weight: bold;
+    font-size: 3em;
+    top: 400px;
+    width: 100%;
+  }
+
+  .color-red {
+    color: #FF0000;
+  }
+
+  .color-white {
+    color: #fff;
+  }
+
+  .philosophy {
+    font-size: 0.5em;
+    background-color: #000;
+  }
+
+  .jumbotron-bg {
+    height: 640px;
+    background: url("images.jpeg") center center / cover no-repeat;
+  }
+
+  .bg {
+    height: 640px;
+  }
+
+  .bg-border {
+    border: solid #c0c0c0;
+    border-width: 0px 0.2px 0px 0.2px;
+  }
+
+  footer {
+    background-color: #000;
+    color: #fff;
+    height: 640px;
+    width: 100%;
+    font-size: 1.5em;
+
+    .contact-left {
+      background-color: #990000;
+    }
+
+    .contact-right {
+      background-color: #CC0000;
+    }
+
+    .font-small {
+      font-size: 0.6em;
+    }
+
+    .silver {
+      color: #c0c0c0;
+    }
+  }
+}

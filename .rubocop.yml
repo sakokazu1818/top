@@ -1,0 +1,43 @@
+Rails:
+  Enabled: true
+
+AllCops:
+  Exclude:
+    - Gemfile
+    - bin/**/*
+    - vendor/**/*
+    - db/schema.rb
+    - db/migrate/*
+    - config/*
+    - config/environments/*
+    - config/initializers/*
+    - node_modules/**/*
+  TargetRubyVersion: 2.3.1
+
+# 日本語のコメントは許可
+Style/AsciiComments:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Max: 100
+
+Metrics/ClassLength:
+  Max: 400
+
+Metrics/LineLength:
+  Max: 180
+
+Metrics/MethodLength:
+  Max: 100
+
+Metrics/ModuleLength:
+  Max: 280
