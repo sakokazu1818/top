@@ -17,6 +17,23 @@ body,
 html {
   height: 100%;
 
+  .position-fixed {
+    width: 100%;
+    z-index: 30;
+  }
+
+  header {
+    .logo, .menu {
+      height: 88px;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .bg-border {
+      border: solid #c0c0c0;
+      border-width: 0px 0px 0.2px 0px;
+    }
+  }
+
   .jumbotron-text {
     position: absolute;
     font-weight: bold;
@@ -40,16 +57,21 @@ html {
 
   .jumbotron-bg {
     height: 640px;
-    background: url("images.jpeg") center center / cover no-repeat;
+    background: url('https://placehold.jp/150x150.png') center center / cover no-repeat;
   }
 
   .bg {
     height: 640px;
   }
 
-  .bg-border {
+  .bg-border-r {
     border: solid #c0c0c0;
     border-width: 0px 0.2px 0px 0.2px;
+  }
+
+  .bg-border-l {
+    border: solid #c0c0c0;
+    border-width: 0px 0px 0px 0.2px;
   }
 
   footer {
