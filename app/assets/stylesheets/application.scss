@@ -62,11 +62,11 @@ html {
   }
 
   .bg {
-    height: 640px;
+    height: 800px;
   }
 
   .bg-grey {
-    height: 640px;
+    height: 800px;
     background-color: #DDDDDD;
   }
 
@@ -84,6 +84,41 @@ html {
     position: absolute;
     top: 64px;
     width: 100%;
+  }
+
+  .who-we-are, .who-we-are-logo {
+    position: absolute;
+    top: 240px;
+    width: 100%;
+    .main {
+      height: 72px;
+      background-color: #DDDDDD;
+
+      .title {
+        font-weight: bold;
+        font-size: 3em;
+      }
+
+      .text {
+        font-size: 2em;
+      }
+    }
+  }
+
+  .more-company {
+    position: absolute;
+    top: 488px;
+    width: 100%;
+
+    .title {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+
+    .discript {
+      font-weight: bold;
+      font-size: 2em;
+    }
   }
 
   footer {
