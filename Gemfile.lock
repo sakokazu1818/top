@@ -75,6 +75,8 @@ GEM
       railties (>= 3.2)
     execjs (2.7.0)
     ffi (1.9.25)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     haml (5.0.4)
@@ -258,6 +260,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   erb2haml
   eslint-rails
+  font-awesome-rails
   haml-rails
   haml_lint
   jbuilder (~> 2.5)
@@ -281,4 +284,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.6
+   1.17.1
