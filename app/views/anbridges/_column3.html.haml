@@ -10,10 +10,18 @@
               .row.card-img-overlay.pt-0.pb-0.pr-3
                 .col-6
                 .col-6.text
-                  .card-text= n
+                  .row
+                    .col-2
+                    .col-8.card-text.pr-0.pl-0= n
+                    .col-2.card-text
+                      %i.fa.fa-angle-right
             .card.text-white
               .row.card-img-overlay.pt-0.pb-0.pr-3
                 .col-6
                 .col-6.text
-                  .card-text= @contents[i - 2]
+                  .row
+                    .col-2
+                    .col-8.card-text.pr-0.pl-0= @contents[i - 2]
+                    .col-2.card-text
+                      %i.fa.fa-angle-right
         .col-1

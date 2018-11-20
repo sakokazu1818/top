@@ -62,6 +62,13 @@ html {
 
     .text {
       background-color: rgba(0, 0, 0, 0.8);
+
+      .card-text {
+        height: 16em;
+        display: flex;
+      	align-items: center;
+      	justify-content: center;
+      }
     }
   }
 
