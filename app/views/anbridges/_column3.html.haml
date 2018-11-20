@@ -1,0 +1,19 @@
+.contents.row.pt-5
+  .col-12
+    - @contents.each.with_index(1) do |n, i|
+      - next if (i % 2).zero?
+      .row.mb-1
+        .col-1
+        .col-10
+          .card-group
+            .card.text-white.mr-1
+              .row.card-img-overlay.pt-0.pb-0.pr-3
+                .col-6
+                .col-6.text
+                  .card-text= n
+            .card.text-white
+              .row.card-img-overlay.pt-0.pb-0.pr-3
+                .col-6
+                .col-6.text
+                  .card-text= @contents[i - 2]
+        .col-1

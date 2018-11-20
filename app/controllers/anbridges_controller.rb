@@ -8,5 +8,7 @@ class AnbridgesController < ApplicationController
       { title: '2018年05月25日お知らせ', text: '株式投資型クラウドファンディングを開始！'},
       { title: '2017年10月05日お知らせ', text: '人と企業をストーリーでつなぐ LISTEN【リスン】に掲載されました'}
     ]
+
+    @contents = ['会社概要', '事業内容', '新卒採用ページ', 'キャリア採用ページ']
   end
 end

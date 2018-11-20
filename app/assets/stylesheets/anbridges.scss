@@ -39,4 +39,23 @@ html {
     border: solid #c0c0c0;
     border-width: 0px 0px 0.2px 0px;
   }
+
+  .contents {
+    .card-group {
+      height: 16em;
+    }
+
+    .card {
+      border: none;
+      background-image: url('https://placehold.jp/100x50.png');
+      background-position: center top;
+      background-repeat: no-repeat;
+      -moz-background-size: cover;
+      background-size: cover;
+    }
+
+    .text {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
 }
