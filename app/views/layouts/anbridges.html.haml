@@ -7,13 +7,12 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = render 'column1'
-    .container
-      = render 'header'
-      .row
-        .col-12
-          = yield
-    %footer
-      .row.pt-3.pb-3.mt-3
-        .col-12
-          = render 'footer'
+    .main
+      = render 'column1'
+      .container
+        = render 'header'
+        = yield
+        %footer
+          .row.pt-3.pb-3.mt-3
+            .col-12
+              = render 'footer'
