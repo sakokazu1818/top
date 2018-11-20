@@ -5,6 +5,17 @@ body,
 html {
   height: 100%;
 
+  header {
+    nav {
+      background-color: #000000;
+      height: 4em;
+
+      .navbar-brand img {
+        height: 3em;
+      }
+    }
+  }
+
   .video-wrap {
     position: relative;
     width: 100%;
