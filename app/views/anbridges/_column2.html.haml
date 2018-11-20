@@ -1,0 +1,21 @@
+.row.pt-5
+  .col-4
+  .col-4.text-center
+    .h1= 'NEWS'
+    %br
+    .font-weight-bold= 'お知らせ'
+  .col-4.h1= 'MORE'
+
+- @news.each.with_index(1) do |n, i|
+  - next if (i % 2).zero?
+  .row.pt-3
+    .col-1
+    .col-5.b-u.mr-5
+      = n[:title]
+      %br
+      = n[:text]
+    .col-5.b-u
+      = @news[i - 2][:title]
+      %br
+      = @news[i - 2][:text]
+    .col-1
