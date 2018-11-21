@@ -9,12 +9,12 @@
 - @news.each.with_index(1) do |n, i|
   - next if (i % 2).zero?
   .row.pt-3
-    .col-1
-    .col-5.b-u.mr-5
+    .col-5.b-u.ml-3
       = n[:title]
       %br
       = n[:text]
-    .col-5.b-u
+    .col-1
+    .col-5.b-u.ml-5
       = @news[i - 2][:title]
       %br
       = @news[i - 2][:text]
