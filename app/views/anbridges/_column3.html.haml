@@ -6,22 +6,28 @@
         .col-1
         .col-10
           .card-group
-            .card.text-white.mr-1
+            .card.text-white.mr-1{ class: n[:class] }
               .row.card-img-overlay.pt-0.pb-0.pr-3
                 .col-6
                 .col-6.text
                   .row
                     .col-2
-                    .col-8.card-text.pr-0.pl-0= n
+                    .col-8.card-text.pr-0.pl-0
+                      = n[:ja]
+                      %br
+                      = n[:es]
                     .col-2.card-text
                       %i.fa.fa-angle-right
-            .card.text-white
+            .card.text-white{ class: @contents[i - 2][:class] }
               .row.card-img-overlay.pt-0.pb-0.pr-3
                 .col-6
                 .col-6.text
                   .row
                     .col-2
-                    .col-8.card-text.pr-0.pl-0= @contents[i - 2]
+                    .col-8.card-text.pr-0.pl-0
+                      = @contents[i - 2][:ja]
+                      %br
+                      = @contents[i - 2][:es]
                     .col-2.card-text
                       %i.fa.fa-angle-right
         .col-1

@@ -9,6 +9,9 @@ class AnbridgesController < ApplicationController
       { title: '2017年10月05日お知らせ', text: '人と企業をストーリーでつなぐ LISTEN【リスン】に掲載されました'}
     ]
 
-    @contents = ['会社概要', '事業内容', '新卒採用ページ', 'キャリア採用ページ']
+    @contents = [{ ja: '会社概要', es: 'COMPANY PROFILE', class: 'company-profile' },
+      { ja: '事業内容', es: 'BUSINESS DESCRIPTION', class: 'business-description' },
+      { ja: '新卒採用', es: 'GRADUATE RECRUITING', class: 'graduate-recruiting' },
+      { ja: 'キャリア採用', es: 'CAREER OPPORTUNITIES', class: 'career-opportunities' }]
   end
 end
