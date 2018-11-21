@@ -93,9 +93,17 @@ html {
 
       .card-text {
         height: 16em;
+
+        .text-area {
+          padding-top: 6em;
+        }
+      }
+
+      .icon-area {
+        height: 16em;
         display: flex;
-      	align-items: center;
-      	justify-content: center;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
