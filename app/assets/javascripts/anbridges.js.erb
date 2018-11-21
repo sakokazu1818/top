@@ -1,0 +1,25 @@
+function initMap() {
+  if ($('#anbridges').length == 0) {
+    return false;
+  }
+
+  // 住所
+  var location = { lat: 35.632896, lng: 139.880394 };
+  var map = new google.maps.Map(document.getElementById('map'), { zoom: 15, center: location });
+
+  //google mapsインスタンス化
+  var transitLayer = new google.maps.TransitLayer();
+  transitLayer.setMap(map);
+
+  // マーカーを押したときにポップアップで出る情報
+  var contentString = '住所：千葉県浦安市舞浜１−１';
+  var infowindow = new google.maps.InfoWindow({content: contentString});
+
+  //マーカーの実体を作る
+  var marker = new google.maps.Marker({position:location,map: map,title: contentString});
+
+  //マーカーをクリックできるようにする
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+}

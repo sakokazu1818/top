@@ -1,4 +1,7 @@
 $(function(){
+  if ($('#anbridges').length == 1) {
+    return false;
+  }
   $('.jumbotron-bg').bgSwitcher({
     images: ["<%= image_path('https://placehold.jp/50/cc9999/993333/500x500.png?text=画像1') %>",
     "<%= image_path('https://placehold.jp/50/CCCCFF/993333/500x500.png?text=画像2') %>",

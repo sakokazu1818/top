@@ -3,11 +3,13 @@
   %head
     %meta{ content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type' }/
     %title Top
+    = javascript_include_tag "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAQDWU6bng3D3hHKS_vzFXljtLXG589wpk&callback=initMap",
+      async: 'async'
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .main
+    .main{ id: "#{controller.controller_name}" }
       = render 'column1'
       .container
         = render 'header'
