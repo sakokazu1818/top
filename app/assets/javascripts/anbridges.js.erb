@@ -4,10 +4,9 @@ $(function(){
     return false;
   }
 
-  let h = $(window).height();
+  $anbridges.hide();
 
-  $anbridges.css('display','none');
-  // $('#loader-bg ,#loader').height(h).css('display','block');
+  $('#loader-bg, #loader').height($(window).height()).css('display','block');
 
   // 住所
   let location = { lat: 35.632896, lng: 139.880394 };
@@ -31,7 +30,7 @@ $(function(){
 });
 
 $(window).on('load', function() {
-  // $('#loader-bg').delay(900).fadeOut(800);
-  // $('#loader').delay(600).fadeOut(300);
-  $('#anbridges').css('display', 'block');
+  $('#loader-bg').delay(900).fadeOut(800);
+  $('#loader').hide();
+  $('#anbridges').show();
 });

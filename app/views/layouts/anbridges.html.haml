@@ -8,6 +8,11 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    #loader-bg
+      #loader
+        = image_tag 'logo_coler', size: '80x80', alt: 'Now Loading...'
+        %br
+        %br Now Loading...
     .main{ id: "#{controller.controller_name}" }
       = render 'column1'
       .container
