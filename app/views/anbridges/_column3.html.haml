@@ -3,8 +3,7 @@
     - @contents.each.with_index(1) do |n, i|
       - next if (i % 2).zero?
       .row.mb-1
-        .col-1
-        .col-10
+        .col-12
           .card-group
             .card.text-white.mr-1{ class: n[:class] }
               .row.card-img-overlay.pt-0.pb-0.pr-3
@@ -30,4 +29,3 @@
                       = @contents[i - 2][:es]
                     .col-2.card-text
                       %i.fa.fa-angle-right
-        .col-1
