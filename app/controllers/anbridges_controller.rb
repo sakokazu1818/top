@@ -13,5 +13,7 @@ class AnbridgesController < ApplicationController
       { ja: '事業内容', es: 'BUSINESS DESCRIPTION', class: 'business-description' },
       { ja: '新卒採用', es: 'GRADUATE RECRUITING', class: 'graduate-recruiting' },
       { ja: 'キャリア採用', es: 'CAREER OPPORTUNITIES', class: 'career-opportunities' }]
+
+    render 'index_smart_phone' if request.smart_phone?
   end
 end
