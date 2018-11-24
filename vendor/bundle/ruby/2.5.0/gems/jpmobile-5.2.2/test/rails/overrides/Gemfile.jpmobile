@@ -1,0 +1,16 @@
+gem 'geokit'
+
+gem 'jpmobile',             path: './vendor/jpmobile'
+gem 'jpmobile-terminfo',    path: './vendor/jpmobile-terminfo'
+gem 'jpmobile-ipaddresses', path: './vendor/jpmobile-ipaddresses'
+
+gem 'activerecord-session_store', '~> 1.1.1'
+
+gem 'pry'
+gem 'pry-byebug'
+
+# Bundle gems for certain environments:
+group :development, :test do
+  gem "rspec-rails"
+  gem 'rails-controller-testing'
+end

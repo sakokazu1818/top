@@ -1,0 +1,2 @@
+class FilterController < FilterControllerBase
+end
