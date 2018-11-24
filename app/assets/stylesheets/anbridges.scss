@@ -85,6 +85,15 @@ html {
     border-width: 0px 0px 0.2px 0px;
   }
 
+  .new_more {
+    border: solid #000000;
+    border-width: 2px 2px 2px 2px;
+
+    a {
+      color: #000000;
+    }
+  }
+
   .contents {
     .card-group {
       height: 16em;
