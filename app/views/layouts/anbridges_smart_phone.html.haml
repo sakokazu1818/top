@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %meta{ content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type' }/
+    %title Top
+    = javascript_include_tag "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAQDWU6bng3D3hHKS_vzFXljtLXG589wpk&callback=initMap"
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    #loader-bg
+      #loader
+        = image_tag 'logo_coler', size: '80x80', alt: 'Now Loading...'
+        %br
+        %br Now Loading...
+    .main{ id: "#{controller.controller_name}_smart_phone" }
+      = render 'column1'
+      .container.sf-container
+        = render 'header'
+        = yield
+        %footer
+          .row.pt-3.pb-3.mt-3
+            .col-12
+              = render 'footer'

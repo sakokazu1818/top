@@ -41,7 +41,6 @@ html {
     background-size:auto 95%;
   }
 
-
   header {
     nav {
       background-color: #000000;
@@ -79,6 +78,31 @@ html {
       padding-left: 1em;
       top: 300px;
       text-shadow: 5px 5px 1px #000000;
+    }
+  }
+
+  .sf-container {
+    margin-left: 20px;
+    max-width: 940px;
+
+    .col-2-title {
+      font-size: 4em;
+    }
+
+    .col-2-title-en {
+      font-size: 2em;
+    }
+
+    .news-title {
+      font-size: 2em;
+    }
+
+    .news-text {
+      font-size: 2em;
+    }
+
+    .news_more {
+      font-size: 3em;
     }
   }
 

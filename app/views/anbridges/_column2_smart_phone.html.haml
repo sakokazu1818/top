@@ -1,0 +1,19 @@
+.row.pt-5.pb-5
+  .col-4
+  .col-4.text-center
+    .col-2-title= 'NEWS'
+    .col-2-title-en.font-weight-bold.pt-2= 'お知らせ'
+
+.pt-5.pb-5
+  - @news.each.with_index(1) do |n, i|
+    .row
+      .col-12.b-u
+        .text-center.news-title.pb-4.pt-3= n[:title]
+        .text-left.font-weight-bold.news-text.pb-5.pt-3= n[:text]
+
+.row.pt-5
+  .col-4
+  .col-4.h4.text-center.new_more
+    = link_to '#', class: 'pl-3 news_more' do
+      = 'MORE'
+      %i.fa.fa-angle-right.pl-3
