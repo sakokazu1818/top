@@ -1,5 +1,10 @@
 $(function(){
   let $anbridges = $('#anbridges');
+
+  if ($anbridges.length == 0) {
+    $anbridges = $('#anbridges_smart_phone');
+  }
+
   if ($anbridges.length == 0) {
     return false;
   }
@@ -30,7 +35,17 @@ $(function(){
 });
 
 $(window).on('load', function() {
+  let $anbridges = $('#anbridges');
+
+  if ($anbridges.length == 0) {
+    $anbridges = $('#anbridges_smart_phone');
+  }
+
+  if ($anbridges.length == 0) {
+    return false;
+  }
+
   $('#loader-bg').delay(900).fadeOut(800);
   $('#loader').hide();
-  $('#anbridges').show();
+  $anbridges.show();
 });
