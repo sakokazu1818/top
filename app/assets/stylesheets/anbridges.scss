@@ -52,6 +52,20 @@ html {
     }
   }
 
+  #anbridges_smart_phone {
+    header {
+      nav {
+        background-color: #000000;
+        height: 6em;
+        font-size: 2em;
+
+        .navbar-brand img {
+          height: 6em;
+        }
+      }
+    }
+  }
+
   .video-wrap {
     position: relative;
     width: 100%;
@@ -78,6 +92,12 @@ html {
       padding-left: 1em;
       top: 300px;
       text-shadow: 5px 5px 1px #000000;
+    }
+  }
+
+  #anbridges_smart_phone {
+    .video-wrap {
+      margin-top: 8em;
     }
   }
 
