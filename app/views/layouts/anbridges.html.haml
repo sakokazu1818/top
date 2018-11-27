@@ -14,7 +14,7 @@
         %br
         %br Now Loading...
     .main{ id: "#{controller.controller_name}" }
-      = render 'column1'
+      = render 'column1' if controller.action_name == 'index'
       .container
         = render 'header'
         = yield

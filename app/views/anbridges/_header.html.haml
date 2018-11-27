@@ -4,7 +4,7 @@
     #navbar-header.collapse.navbar-collapse
       %ul.navbar-nav.mr-auto
       %ul.navbar-nav
-        - ([{ ja: 'TOP' }] + @contents).each do |c|
+        - ([{ ja: 'TOP', href: root_path }] + @contents).each do |c|
           %li.nav-item.active
-            %a.nav-link{:href => "#"}
+            %a.nav-link{:href => c[:href].present? ? c[:href] : '#'}
               = c[:ja]

@@ -1,4 +1,6 @@
 class AnbridgesController < ApplicationController
+  before_action :set_contents
+
   layout 'anbridges.html.haml'
 
   def index
@@ -9,11 +11,18 @@ class AnbridgesController < ApplicationController
       { title: '2017年10月05日お知らせ', text: '人と企業をストーリーでつなぐ LISTEN【リスン】に掲載されました'}
     ]
 
-    @contents = [{ ja: '会社概要', es: 'COMPANY PROFILE', class: 'company-profile' },
+    render :index_smart_phone, layout: 'anbridges_smart_phone.html.haml' if request.smart_phone?
+  end
+
+  def company
+  end
+
+  private
+
+  def set_contents
+    @contents = [{ ja: '会社概要', es: 'COMPANY PROFILE', class: 'company-profile', href: company_path },
       { ja: '事業内容', es: 'BUSINESS DESCRIPTION', class: 'business-description' },
       { ja: '新卒採用', es: 'GRADUATE RECRUITING', class: 'graduate-recruiting' },
       { ja: 'キャリア採用', es: 'CAREER OPPORTUNITIES', class: 'career-opportunities' }]
-
-    render :index_smart_phone, layout: 'anbridges_smart_phone.html.haml' if request.smart_phone?
   end
 end
