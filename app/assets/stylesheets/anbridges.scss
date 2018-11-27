@@ -211,4 +211,30 @@ html {
     text-align:left;
     width: 100%;
   }
+
+  .page-title-wrap {
+    position: relative;
+    width: 100%;
+
+    #title-bg {
+      width: 100%;
+    }
+
+    .text-1, .text-2 {
+      font-family: serif;
+      color: #fff;
+      font-size: 100%;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .text-1 {
+      font-size: 200%;
+      top: 150px;
+    }
+
+    .text-2 {
+      top: 200px;
+    }
+  }
 }

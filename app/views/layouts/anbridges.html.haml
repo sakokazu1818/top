@@ -14,7 +14,11 @@
         %br
         %br Now Loading...
     .main{ id: "#{controller.controller_name}" }
-      = render 'column1' if controller.action_name == 'index'
+      - if controller.action_name == 'index'
+        = render 'column1'
+      - else
+        = render partial: 'page_title', locals: { title_ja: '会社概要', title_es: 'COMPANY PROFILE' }
+
       .container
         = render 'header'
         = yield
