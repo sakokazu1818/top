@@ -229,12 +229,26 @@ html {
     }
 
     .text-1 {
+      padding-left: 1em;
       font-size: 200%;
       top: 150px;
     }
 
     .text-2 {
+      padding-left: 2em;
       top: 200px;
+    }
+  }
+
+  .category-title {
+    height: 8em;
+    background-color: #ECECEC;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
+    -webkit-background-size: 7px 7px;
+
+    .text {
+      padding-top: 1.3em;
+      font-size: 200%;
     }
   }
 }
