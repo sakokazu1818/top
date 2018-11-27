@@ -251,4 +251,14 @@ html {
       font-size: 200%;
     }
   }
+
+  .category-title2 {
+    background-color: #FFFFFF;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #000000), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #000000),color-stop(.75, #000000), color-stop(.75, transparent),to(transparent));
+    -webkit-background-size: 5px 5px;
+  }
+
+  .text-category-title2 {
+    font-size: 200%;
+  }
 }

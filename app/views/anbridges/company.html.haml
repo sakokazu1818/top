@@ -1,3 +1,5 @@
 = stylesheet_link_tag "anbridges", :media => "all"
 .pt-5.pb-5= render partial: 'category_title', locals: { text: 'テクノロジーの力で、未来の日本を創る' }
+.pt-5.pb-5= render partial: 'category_title2', locals: { text_ja: '企業理念', text_es: 'VISION' }
+.pt-5.pb-5= render partial: 'category_title2', locals: { text_ja: 'アクセス', text_es: 'ACCESS' }
 = render 'google_map'
