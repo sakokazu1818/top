@@ -48,12 +48,4 @@ $(window).on('load', function() {
   $('#loader-bg').delay(900).fadeOut(800);
   $('#loader').hide();
   $anbridges.show();
-
-  const video = document.querySelector('video');
-  const play = video.play();
-  if (play instanceof Promise) {
-    play.catch(error => {
-      console.error('自動再生できません');
-    });
-  }
 });
