@@ -4,6 +4,7 @@
 body,
 html {
   height: 100%;
+  background-color: #000000;
 
   #loader-bg {
     display: none;
@@ -12,7 +13,7 @@ html {
     height: 100%;
     top: 0px;
     left: 0px;
-    background: #000;
+    background-color: #000;
     z-index: 1;
   }
 

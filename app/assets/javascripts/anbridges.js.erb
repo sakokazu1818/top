@@ -53,9 +53,13 @@ $(document).on('turbolinks:load', function() {
 
   if (video != null) {
     video.oncanplay = function(){
-      showPage()
+      setTimeout(showPage, 2000);
     }
   }
+
+  $('.nav-item').on('click', function() {
+    $anbridges.hide();
+  });
 })
 
 $(window).on('turbolinks:load', function() {
@@ -63,5 +67,5 @@ $(window).on('turbolinks:load', function() {
     return false;
   }
 
-  showPage()
+  setTimeout(showPage, 2000);
 });
