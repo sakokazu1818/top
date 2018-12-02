@@ -63,7 +63,25 @@ html {
         .navbar-brand img {
           height: 6em;
         }
+
+        .hamburger-menu {
+          font-size: 2em;
+          color: #FFFFFF;
+        }
       }
+    }
+  }
+
+  #hamburger-menu-item {
+    width: 50%;
+    font-size: 2em;
+    position: fixed;
+    right: 0px;
+    top: 6em;
+    z-index: 2;
+
+    li {
+      background: khaki;
     }
   }
 

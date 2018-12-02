@@ -60,6 +60,12 @@ $(document).on('turbolinks:load', function() {
   $('.nav-item').on('click', function() {
     $anbridges.hide();
   });
+
+  $("#hamburger-menu-item").hide();
+
+  $('.hamburger-menu').on('click', function() {
+    $("#hamburger-menu-item").toggle( 'slide', { direction: 'right' } , 1000 );
+  });
 })
 
 $(window).on('turbolinks:load', function() {

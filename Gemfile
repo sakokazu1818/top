@@ -39,6 +39,7 @@ gem 'erb2haml'
 
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 gem 'font-awesome-rails'
 
