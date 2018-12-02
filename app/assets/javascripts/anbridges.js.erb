@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load', function() {
   let $anbridges = $('#anbridges');
 
   if ($anbridges.length == 0) {
@@ -32,9 +32,9 @@ $(function(){
   marker.addListener('click', function() {
     infowindow.open(map, marker);
   });
-});
+})
 
-$(window).on('load', function() {
+$(window).on('turbolinks:load', function() {
   let $anbridges = $('#anbridges');
 
   if ($anbridges.length == 0) {
