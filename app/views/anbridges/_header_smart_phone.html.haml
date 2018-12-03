@@ -6,6 +6,7 @@
 
 #hamburger-menu-item.ui-widget-content.ui-corner-all
   %ul.list-group.list-group-flush
-    %li.list-group-item= "リスト1"
-    %li.list-group-item= "リスト1"
-    %li.list-group-item= "リスト1"
+    - ([{ ja: 'TOP', href: root_path }] + @contents).each do |c|
+      %li.list-group-item
+        %a.nav-link{:href => c[:href].present? ? c[:href] : '#'}
+          = c[:ja]
