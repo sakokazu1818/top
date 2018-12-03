@@ -74,6 +74,7 @@ html {
   }
 
   #hamburger-menu-item {
+    height: 100%;
     width: 50%;
     font-size: 2em;
     position: fixed;
@@ -97,6 +98,7 @@ html {
   }
 
   #menu-bg {
+    height: 100%;
     visibility: hidden;
     position: fixed;
     right: 0px;

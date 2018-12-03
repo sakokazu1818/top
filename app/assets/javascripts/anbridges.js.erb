@@ -64,9 +64,6 @@ $(document).on('turbolinks:load', function() {
   $("#hamburger-menu-item").hide();
 
   $('.hamburger-menu').on('click', function() {
-    $('#hamburger-menu-item').height($(window).height());
-    $('#menu-bg').height($(window).height());
-
     $("#hamburger-menu-item").show( 'slide', { direction: 'right' } , 1000 );
     $('#menu-bg').css('visibility', 'visible');
   });
