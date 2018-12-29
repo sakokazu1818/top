@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get '/career', to: 'anbridges#career'
 
   scope :admin do
+    get '/', to: 'news#index'
+
     resources :news
   end
 end
