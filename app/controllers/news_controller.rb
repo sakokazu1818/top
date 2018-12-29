@@ -1,4 +1,5 @@
 class NewsController < ApplicationController
+  layout 'admin.html.haml'
   before_action :set_news, only: [:show, :edit, :update, :destroy]
 
   # GET /news
