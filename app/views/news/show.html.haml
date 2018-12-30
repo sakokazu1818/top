@@ -1,15 +1,22 @@
-%p#notice= notice
+.row
+  .col-12
+    #notice= notice
 
-%p
-  %b Title:
-  = @news.title
-%p
-  %b Text:
-  = @news.text
-%p
-  %b Tag:
-  = @news.tag
+%table.table.table-striped.table-bordered
+  %thead
+    %tr
+      %th タイトル
+      %th タグ
+      %th 概要
 
-= link_to 'Edit', edit_news_path(@news)
-\|
-= link_to 'Back', news_index_path
+
+  %tbody
+    %tr
+      %td= @news.title
+      %td= @news.tag
+      %td= @news.text
+
+.row
+  .col-12.text-right
+    = link_to '戻る', news_index_path, class: 'btn btn-outline-warning'
+    = link_to '編集', edit_news_path(@news), class: 'btn btn-outline-success'
