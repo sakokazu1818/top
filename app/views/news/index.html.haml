@@ -14,7 +14,7 @@
         %td= news.title
         %td= news.tag
         %td= news.text
-        %td
+        %td.text-right
           = link_to 'Show', news, class: 'btn btn-outline-info'
           = link_to 'Edit', edit_news_path(news), class: 'btn btn-outline-success'
           = link_to 'Destroy', news, method: :delete,
