@@ -6,14 +6,17 @@
         - @news.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :text
-    = f.text_field :text
-  .field
-    = f.label :tag
-    = f.text_field :tag
-  .actions
-    = f.submit 'Save'
+  .form-group.row
+    .col-2.col-form-label= f.label :title, 'タイトル'
+    .col-10= f.text_field :title, class: 'form-control'
+  .form-group.row
+    .col-2.col-form-label= f.label :text, '概要'
+    .col-10= f.text_field :text, class: 'form-control'
+  .form-group.row
+    .col-2.col-form-label= f.label :tag, 'タグ'
+    .col-10= f.text_field :tag, class: 'form-control'
+  .form-group.row
+    .col-8
+    .col-4.text-right
+      = link_to 'Back', news_index_path, class: 'btn btn-outline-warning'
+      = f.submit 'Save', class: 'btn btn-outline-primary'

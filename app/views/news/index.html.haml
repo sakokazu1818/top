@@ -15,8 +15,9 @@
         %td= news.tag
         %td= news.text
         %td
-          = link_to 'Show', news
-          = link_to 'Edit', edit_news_path(news)
-          = link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' }
+          = link_to 'Show', news, class: 'btn btn-outline-info'
+          = link_to 'Edit', edit_news_path(news), class: 'btn btn-outline-success'
+          = link_to 'Destroy', news, method: :delete,
+            data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger'
 
 .mt-5= link_to '新規作成', new_news_path, class: 'btn btn-outline-primary'
