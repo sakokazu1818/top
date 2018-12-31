@@ -11,7 +11,6 @@ class NewsController < ApplicationController
   # GET /news/1
   # GET /news/1.json
   def show
-    raise
   end
 
   # GET /news/new
@@ -30,7 +29,7 @@ class NewsController < ApplicationController
 
     respond_to do |format|
       if @news.save
-        format.html { redirect_to @news, notice: 'News was successfully created.' }
+        format.html { redirect_to @news, notice: 'ニュースの作成に成功しました。' }
         format.json { render :show, status: :created, location: @news }
       else
         format.html { render :new }

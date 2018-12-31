@@ -1,6 +1,7 @@
-.row
-  .col-12
-    #notice= notice
+- if notice.present?
+  .row
+    .col-12
+      .alert.alert-primary= notice
 
 %table.table.table-striped.table-bordered
   %thead
