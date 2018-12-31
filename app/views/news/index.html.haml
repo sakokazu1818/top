@@ -17,7 +17,7 @@
         %td.text-right
           = link_to '詳細', news, class: 'btn btn-outline-info'
           = link_to '編集', edit_news_path(news), class: 'btn btn-outline-success'
-          = link_to '削除', news, method: :delete,
+          = link_to '削除', news_path(news.id), method: :delete,
             data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger'
 
 .mt-5= link_to '新規作成', new_news_path, class: 'btn btn-outline-primary'
