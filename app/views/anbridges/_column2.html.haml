@@ -12,23 +12,29 @@
 
 - news = @news.each_slice(2).to_a
 - news.each do |n|
-  .row.pt-3
+  .row.pt-5
     - if n.length > 1
-      .col-5.b-u.ml-3
-        = n.first.title
-        %br
-        = n.first.text
+      .col-5.ml-3
+        .row
+          .news-at= n.first.created_at.strftime('%Y年%m月%d日')
+          .col-3.tag.text-center= n.first.tag
+        .row.pt-3
+          .col-12.pl-0.b-u= n.first.text
       .col-1
-      .col-5.b-u.ml-5
-        = n.last.title
-        %br
-        = n.last.text
+      .col-5.ml-5
+        .row
+          .news-at= n.last.created_at.strftime('%Y年%m月%d日')
+          .col-3.tag.text-center= n.last.tag
+        .row.pt-3
+          .col-12.pl-0.b-u= n.last.text
       .col-1
     - else
-      .col-5.b-u.ml-3
-        = n.first.title
-        %br
-        = n.first.text
+      .col-5.ml-3
+        .row
+          .news-at= n.first.created_at.strftime('%Y年%m月%d日')
+          .col-3.tag.text-center= n.first.tag
+        .row.pt-3
+          .col-12.pl-0.b-u= n.first.text
       .col-1
       .col-5.ml-5
       .col-1
