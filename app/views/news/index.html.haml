@@ -5,16 +5,14 @@
     %tr
       %th タイトル
       %th タグ
-      %th 概要
       %th
 
   %tbody
     - @news.each do |news|
       %tr
         %td= news.title
-        %td= news.tag
-        %td= news.text
-        %td.text-right
+        %td.text-nowrap= news.tag
+        %td.text-nowrap.text-right
           = link_to '詳細', news, class: 'btn btn-outline-info'
           = link_to '編集', edit_news_path(news), class: 'btn btn-outline-success'
           = link_to '削除', news_path(news.id), method: :delete,
