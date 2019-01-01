@@ -19,14 +19,14 @@
           .news-at= n.first.created_at.strftime('%Y年%m月%d日')
           .col-3.tag.text-center= n.first.tag
         .row.pt-3
-          .col-12.pl-0.b-u= n.first.text
+          .col-12.pl-0.b-u= n.first.title
       .col-1
       .col-5.ml-5
         .row
           .news-at= n.last.created_at.strftime('%Y年%m月%d日')
           .col-3.tag.text-center= n.last.tag
         .row.pt-3
-          .col-12.pl-0.b-u= n.last.text
+          .col-12.pl-0.b-u= n.last.title
       .col-1
     - else
       .col-5.ml-3
@@ -34,7 +34,7 @@
           .news-at= n.first.created_at.strftime('%Y年%m月%d日')
           .col-3.tag.text-center= n.first.tag
         .row.pt-3
-          .col-12.pl-0.b-u= n.first.text
+          .col-12.pl-0.b-u= n.first.title
       .col-1
       .col-5.ml-5
       .col-1
