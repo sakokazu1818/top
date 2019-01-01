@@ -10,9 +10,6 @@
     .col-2.col-form-label= f.label :title, 'タイトル'
     .col-10= f.text_field :title, class: 'form-control'
   .form-group.row
-    .col-2.col-form-label= f.label :text, '概要'
-    .col-10= f.text_field :text, class: 'form-control'
-  .form-group.row
     .col-2.col-form-label= f.label :tag, 'タグ'
     .col-10= f.select :tag, options_for_select(['お知らせ', 'プレス', 'その他'], selected: @news.tag ),
       {}, { class: 'form-control' }
