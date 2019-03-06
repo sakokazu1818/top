@@ -13,6 +13,13 @@
     .col-2.col-form-label= f.label :tag, 'タグ'
     .col-10= f.select :tag, options_for_select(['お知らせ', 'プレス', 'その他'], selected: @news.tag ),
       {}, { class: 'form-control' }
+
+  - f.nested_fields_for :news_contents do |nc|
+    .form-group.row
+      .col-2.col-form-label= nc.label :overview, 'タイトル'
+      .col-10= nc.text_field :overview, class: 'form-control'
+  = f.add_nested_fields_link :news_contents, 'Add new', class: 'btn btn-primary'
+
   .form-group.row
     .col-8
     .col-4.text-right

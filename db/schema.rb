@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190101074150) do
+ActiveRecord::Schema.define(version: 20190101081043) do
 
   create_table "news", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
@@ -19,4 +19,14 @@ ActiveRecord::Schema.define(version: 20190101074150) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "news_contents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "overview"
+    t.string   "text"
+    t.integer  "news_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["news_id"], name: "index_news_contents_on_news_id", using: :btree
+  end
+
+  add_foreign_key "news_contents", "news"
 end
