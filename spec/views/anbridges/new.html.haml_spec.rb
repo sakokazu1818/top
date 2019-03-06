@@ -1,14 +1,14 @@
 require 'rails_helper'
 
-RSpec.describe "anbridges/new", type: :view do
+RSpec.describe 'anbridges/new', type: :view do
   before(:each) do
-    assign(:anbridge, Anbridge.new())
+    assign(:anbridge, Anbridge.new)
   end
 
-  it "renders new anbridge form" do
+  it 'renders new anbridge form' do
     render
 
-    assert_select "form[action=?][method=?]", anbridges_path, "post" do
+    assert_select 'form[action=?][method=?]', anbridges_path, 'post' do
     end
   end
 end

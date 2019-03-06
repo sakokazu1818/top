@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
   layout 'admin.html.haml'
-  before_action :set_news, only: [:show, :edit, :update, :destroy]
+  before_action :set_news, only: %i[show edit update destroy]
 
   # GET /news
   # GET /news.json
@@ -10,8 +10,7 @@ class NewsController < ApplicationController
 
   # GET /news/1
   # GET /news/1.json
-  def show
-  end
+  def show; end
 
   # GET /news/new
   def new
@@ -19,8 +18,7 @@ class NewsController < ApplicationController
   end
 
   # GET /news/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /news
   # POST /news.json
@@ -63,13 +61,14 @@ class NewsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_news
-      @news = News.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def news_params
-      params.require(:news).permit(:title, :text, :tag)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_news
+    @news = News.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def news_params
+    params.require(:news).permit(:title, :text, :tag)
+  end
 end

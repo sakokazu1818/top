@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/career', to: 'anbridges#career'
 
   scope :admin do
+    resource :sessions, only: [:new, :create, :destroy]
     get '/', to: 'news#index'
 
     resources :news

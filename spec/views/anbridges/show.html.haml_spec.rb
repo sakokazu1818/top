@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe "anbridges/show", type: :view do
+RSpec.describe 'anbridges/show', type: :view do
   before(:each) do
-    @anbridge = assign(:anbridge, Anbridge.create!())
+    @anbridge = assign(:anbridge, Anbridge.create!)
   end
 
-  it "renders attributes in <p>" do
+  it 'renders attributes in <p>' do
     render
   end
 end
