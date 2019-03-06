@@ -1,0 +1,19 @@
+%h1 Listing admin_sessions
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @admin_sessions.each do |admin_session|
+      %tr
+        %td= link_to 'Show', admin_session
+        %td= link_to 'Edit', edit_admin_session_path(admin_session)
+        %td= link_to 'Destroy', admin_session, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Session', new_admin_session_path
