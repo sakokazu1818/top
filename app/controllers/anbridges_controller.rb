@@ -4,7 +4,9 @@ class AnbridgesController < ApplicationController
   layout 'anbridges.html.haml'
 
   def index
-    @news = News.all
+    # TODO
+    # @news = News.all
+    @news = []
 
     render :index_smart_phone, layout: 'anbridges_smart_phone.html.haml' if request.smart_phone?
   end
