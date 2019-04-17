@@ -17,3 +17,5 @@
 .byebug_history
 
 vendor/bundle/*
+
+app/assets/videos/top_video.mov

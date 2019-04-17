@@ -34,3 +34,5 @@ $ rubocop -a
 ```
 $ be haml-lint .
 ```
+
+heroku run bash
