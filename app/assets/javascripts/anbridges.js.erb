@@ -52,7 +52,7 @@ $(document).on('turbolinks:load', function() {
   let video = document.querySelector('video')
 
   if (video != null) {
-    video.oncanplay = function(){
+    video.oncanplaythrough = function(){
       setTimeout(showPage, 2000);
     }
   }
