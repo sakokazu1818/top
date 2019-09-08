@@ -43,10 +43,100 @@ html {
   }
 
   header {
+    /* アイコン周り全体 */
+    .flowbtn16 {
+      border-radius: 4px;
+      display: inline-block;
+      width: 4em;
+      height: 2.3em;
+      font-size: 1em;
+      background-color: #444;
+      color: #fff;
+    }
+    .flowbtn16:hover{
+      text-decoration:none;
+    }
+    /* Twitterマウスホバー時 */
+    .flowbtn16.fl_tw2:hover{
+      background: #55acee;
+    }
+    /* Instagramマウスホバー時 */
+    .flowbtn16.insta_btn2:hover{
+      background: #c6529a;
+    }
+    /* Facebookマウスホバー時 */
+    .flowbtn16.fl_fb2:hover{
+      background: #3b5998;
+    }
+
+    /* ボタン内テキスト調整 */
+    .flowbtn16 div{
+      font-size: 0.5em;
+      letter-spacing: 0;
+      position: relative;
+      bottom: 5px;
+    }
+    /* ulタグの内側余白を０にする */
+    ul.snsbtniti{
+      padding-left: 0 !important;
+      padding-top: 0.2em !important;
+      margin-left: 2em;
+      margin-bottom: 0;
+    }
+    /* アイコンボタンの位置調整 */
+    .snsbtniti{
+      display: flex;
+      flex-flow: row wrap;
+    }
+    /* アイコンボタン同士の余白調整 */
+    .snsbtniti li{
+      margin-left: 0.5em;
+      text-align: center !important;
+      list-style-type: none;
+    }
+
     nav {
-      background-color: #000000;
+      background-color: #FFF;
       height: 4em;
       z-index: 5 !important;
+
+      .navbar-nav {
+        font-size: 1.2em;
+        a {
+          font-weight: bold;
+          color: #000 !important;
+          display: block;
+          padding: 0 0 5px;
+          text-decoration: none;
+        }
+
+        .active {
+          a::after {
+            border-bottom: solid 3px #87CEFA;
+            bottom: 0;
+            content: "";
+            display: block;
+            transition: all .3s ease;
+            -webkit-transition: all .3s ease;
+            width: 0;
+            width: 100%;
+          }
+        }
+
+        a::after {
+          border-bottom: solid 3px #87CEFA;
+          bottom: 0;
+          content: "";
+          display: block;
+          transition: all .3s ease;
+          -webkit-transition: all .3s ease;
+          width: 0;
+        }
+
+        a:hover::after {
+          width: 100%;
+        }
+      }
 
       .navbar-brand img {
         height: 3em;
@@ -57,7 +147,7 @@ html {
   #anbridges_smart_phone {
     header {
       nav {
-        background-color: #000000;
+        background-color: #FFF;
         height: 6em;
         font-size: 2em;
 
@@ -67,7 +157,7 @@ html {
 
         .hamburger-menu {
           font-size: 2em;
-          color: #FFFFFF;
+          color: #000;
         }
       }
     }
@@ -86,7 +176,7 @@ html {
     border-radius: 0px;
 
     ul {
-      li {
+      li.border {
         background: #000000;
         border-color: #FFFFFF;
 
@@ -94,6 +184,56 @@ html {
           color: #FFFFFF;
         }
       }
+
+      li {
+        background: #000000;
+        border-top-color: #FFFFFF;
+
+        a {
+          color: #FFFFFF;
+        }
+      }
+    }
+
+    /* アイコン周り全体 */
+    .flowbtn16 {
+      border-radius: 4px;
+      display: inline-block;
+      width: 4em;
+      height: 2.3em;
+      font-size: 1em;
+      background-color: #444;
+      color: #fff;
+    }
+
+    /* ボタン内テキスト調整 */
+    .flowbtn16 div{
+      font-size: 0.5em;
+      letter-spacing: 0;
+      position: relative;
+      bottom: 5px;
+    }
+    /* ulタグの内側余白を０にする */
+    ul.snsbtniti{
+      padding-left: 0 !important;
+      padding-top: 0.2em !important;
+      margin-bottom: 0;
+    }
+    /* アイコンボタンの位置調整 */
+    .snsbtniti{
+      display: flex;
+      flex-flow: row wrap;
+    }
+    /* アイコンボタン同士の余白調整 */
+    .snsbtniti li{
+      margin-left: 0.5em;
+      text-align: center !important;
+      list-style-type: none;
+    }
+
+    .bb {
+      border-bottom: 1px;
+      border-bottom-color: #FFFFFF;
     }
   }
 
@@ -244,6 +384,14 @@ html {
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+
+      .scale img:hover {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
       }
     }
   }

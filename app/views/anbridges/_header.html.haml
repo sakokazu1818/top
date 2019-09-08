@@ -1,10 +1,23 @@
 %header
   %nav.navbar.navbar-expand-md.navbar-dark.fixed-top
-    .navbar-brand= image_tag 'logo'
+    .navbar-brand= image_tag 'logo-master'
     #navbar-header.collapse.navbar-collapse
       %ul.navbar-nav.mr-auto
       %ul.navbar-nav
-        - ([{ ja: 'TOP', href: root_path }] + @contents).each do |c|
-          %li.nav-item.active
+        - ([{ ja: 'TOP', href: root_path }] + @contents).each_with_index do |c, i|
+          %li.nav-item{ class: i.zero? ? 'active' : ''}
             %a.nav-link{:href => c[:href].present? ? c[:href] : '#'}
-              = c[:ja]
+              %span.bb= c[:ja]
+      %ul.snsbtniti
+        %li
+          %a.flowbtn16.fl_tw2{:href => "TwitterのプロフィールURL"}
+            %i.fa.fa-twitter
+            %div Twitter
+        %li
+          %a.flowbtn16.fl_fb2{:href => "FacebookページのURL"}
+            %i.fa.fa-facebook-f
+            %div Facebook
+        %li
+          %a.flowbtn16.insta_btn2{:href => "インスタのプロフィールURL"}
+            %i.fa.fa-instagram
+            %div Instagram

@@ -1,12 +1,30 @@
 %header
   %nav.navbar.navbar-expand-md.navbar-dark.fixed-top
-    .navbar-brand= image_tag 'logo'
+    .navbar-brand= image_tag 'logo-master'
     #navbar-header.collapse.navbar-collapse
     %i.fa.fa-bars.mr-4.hamburger-menu
 
 #hamburger-menu-item.ui-widget-content.ui-corner-all
   %ul.list-group.list-group-flush
     - ([{ ja: 'TOP', href: root_path }] + @contents).each do |c|
-      %li.list-group-item
+      %li.list-group-item.border
         %a.nav-link{:href => c[:href].present? ? c[:href] : '#'}
           = c[:ja]
+    %li.list-group-item
+      %a.nav-link{:href => '#'}
+        Follow
+  %ul.snsbtniti.ml-3
+    %li
+      %a.flowbtn16.fl_tw2{:href => "TwitterのプロフィールURL"}
+        %i.fa.fa-twitter
+        %div Twitter
+    %li
+      %a.flowbtn16.fl_fb2{:href => "FacebookページのURL"}
+        %i.fa.fa-facebook-f
+        %div Facebook
+    %li
+      %a.flowbtn16.insta_btn2{:href => "インスタのプロフィールURL"}
+        %i.fa.fa-instagram
+        %div Instagram
+  %ul.list-group.list-group-flush.pt-3
+    %li.list-group-item
