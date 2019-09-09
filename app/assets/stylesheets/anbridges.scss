@@ -341,15 +341,16 @@ html {
   .contents {
     .card-group {
       height: 16em;
+      overflow: hidden;
+      img {
+        height: 16em;
+        width: auto;
+      }
     }
 
     .card {
       border: none;
-      background-image: url('https://placehold.jp/100x50.png');
-      background-position: center top;
-      background-repeat: no-repeat;
-      -moz-background-size: cover;
-      background-size: cover;
+      overflow: hidden;
     }
 
     .company-profile {

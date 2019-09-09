@@ -5,7 +5,8 @@
       .row.mb-1
         .col-12
           .card-group
-            .card.text-white.mr-1{ class: n[:class] }
+            .card.text-white.mr-1
+              = image_tag(n[:img], class: 'koko')
               .row.card-img-overlay.pt-0.pb-0.pr-3
                 .col-6
                 .col-6.text
@@ -17,7 +18,8 @@
                         .text-center= n[:es]
                     .col-1.pr-0.pl-0.icon-area
                       %i.fa.fa-angle-right
-            .card.text-white{ class: @contents[i - 2][:class] }
+            .card.text-white
+              = image_tag(@contents[i - 2][:img])
               .row.card-img-overlay.pt-0.pb-0.pr-3
                 .col-6
                 .col-6.text
