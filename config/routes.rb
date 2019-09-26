@@ -15,4 +15,6 @@ Rails.application.routes.draw do
 
     resources :news
   end
+
+  resources :portal
 end
