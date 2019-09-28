@@ -1,10 +1,41 @@
 @import "bootstrap";
 @import "font-awesome";
+@import "jquery-ui.css";
+
+@font-face {
+  font-family: "Nexa-B";
+  src: font-url("Nexa-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Nexa-l";
+  src: font-url("Nexa-Light.otf") format("opentype");
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Krona One'), local('KronaOne-Regular'), url(https://fonts.gstatic.com/s/kronaone/v8/jAnEgHdjHcjgfIb1ZcUyOIWg_8a0Wy2V.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Krona One'), local('KronaOne-Regular'), url(https://fonts.gstatic.com/s/kronaone/v8/jAnEgHdjHcjgfIb1ZcUyNoWg_8a0Ww.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 
 body,
 html {
   height: 100%;
+  width: 100%;
   background-color: #000000;
+  font-family: 'Nexa-B', 'MS PGothic', serif;
 
   #loader-bg {
     display: none;
@@ -14,7 +45,7 @@ html {
     top: 0px;
     left: 0px;
     background-color: #000;
-    z-index: 1;
+    z-index: 4;
   }
 
   #loader {
@@ -22,13 +53,14 @@ html {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 200px;
+    width: 20em;
     height: 200px;
     margin-top: -100px;
-    margin-left: -100px;
+    margin-left: -10em;
     text-align: center;
     color: #fff;
-    z-index: 2;
+    z-index: 5;
+    font-size: 3em;
   }
 
   .main {
@@ -43,6 +75,15 @@ html {
   }
 
   header {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #fff;
+
     /* アイコン周り全体 */
     .flowbtn16 {
       border-radius: 4px;
@@ -98,7 +139,6 @@ html {
     nav {
       background-color: #FFF;
       height: 4em;
-      z-index: 5 !important;
 
       .navbar-nav {
         font-size: 1.2em;
@@ -139,7 +179,12 @@ html {
       }
 
       .navbar-brand img {
+        padding-left: 5em;
         height: 3em;
+      }
+
+      #pr-5 {
+        padding-left: 5em;
       }
     }
   }
@@ -250,34 +295,46 @@ html {
     z-index: 1;
   }
 
+  .title-wrap {
+    width: 100%;
+    height: 660px;
+
+    .text-1, .text-2, .text-3, .text-4 {
+      color: #000;
+      font-size: 800%;
+      position: absolute;
+    }
+
+    .text-1 {
+      padding-left: 5em;
+      top: 540px;
+      font-size: 180%;
+    }
+
+    .text-2 {
+      padding-left: 1em;
+      top: 150px;
+    }
+
+    .text-3 {
+      padding-left: 1em;
+      top: 270px;
+    }
+
+    .text-4 {
+      padding-left: 1em;
+      top: 380px;
+    }
+  }
+
   .video-wrap {
-    position: relative;
     width: 100%;
 
     #video {
       width: 100%;
     }
-
-    .text-1, .text-2 {
-      font-family: serif;
-      color: #fff;
-      font-size: 400%;
-      position: absolute;
-      z-index: 1;
-    }
-
-    .text-1 {
-      padding-left: 2em;
-      top: 200px;
-      text-shadow: 5px 5px 1px #000000;
-    }
-
-    .text-2 {
-      padding-left: 1em;
-      top: 300px;
-      text-shadow: 5px 5px 1px #000000;
-    }
   }
+
 
   #anbridges_smart_phone {
     .video-wrap {
@@ -414,7 +471,6 @@ html {
     }
 
     .text-1, .text-2 {
-      font-family: serif;
       color: #fff;
       font-size: 100%;
       position: absolute;

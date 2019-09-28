@@ -11,7 +11,12 @@
 // about supported directives.
 //
 
+//= require turbolinks
 //= require jquery3
+//= require jquery_ujs
+//= require popper
 //= require jquery-ui.js
 //= require jquery-ui
+//= require bootstrap-sprockets
+//= require nested_form_fields
 //= require_tree .

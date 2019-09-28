@@ -12,6 +12,62 @@ function showPage() {
   $('#loader-bg').delay(900).fadeOut(800);
   $('#loader').hide();
   $anbridges.show();
+
+  $('.js-text-1').textillate({
+      initialDelay: 500,
+      autoStart: true,
+
+      // アニメーション設定(開始)
+      in: {
+        effect: 'bounceInRight',
+        delayScale: 3,
+        delay: 50,
+        sync: false,
+        shuffle: false
+      }
+  });
+
+  $('.js-text-2').textillate({
+      initialDelay: 700,
+      autoStart: true,
+
+      // アニメーション設定(開始)
+      in: {
+        effect: 'bounceInRight',
+        delayScale: 3,
+        delay: 50,
+        sync: false,
+        shuffle: false
+      }
+  });
+
+  $('.js-text-3').textillate({
+      initialDelay: 900,
+      autoStart: true,
+
+      // アニメーション設定(開始)
+      in: {
+        effect: 'bounceInRight',
+        delayScale: 3,
+        delay: 50,
+        sync: false,
+        shuffle: false
+      }
+  });
+
+  $('.js-text-4').textillate({
+      initialDelay: 700,
+      autoStart: true,
+
+      // アニメーション設定(開始)
+      in: {
+        effect: 'bounceInRight',
+        delayScale: 3,
+        delay: 50,
+        sync: false,
+        shuffle: false
+      }
+  });
 }
 
 function contents() {
@@ -41,6 +97,30 @@ function contents() {
 }
 
 $(document).on('turbolinks:load', function() {
+  $('.loading').textillate({
+      loop: true,
+      minDisplayTime: 1000,
+      autoStart: true,
+
+      // アニメーション設定(開始)
+      in: {
+        effect: 'bounce',
+        delayScale: 3,
+        delay: 50,
+        sync: false,
+        shuffle: false
+      },
+
+      // アニメーション設定(終了)
+      out: {
+        effect: 'bounce',
+        delayScale: 3,
+        delay: 50,
+        sync: false,
+        shuffle: false
+      }
+  });
+
   let $anbridges = $('#anbridges');
 
   if ($anbridges.length == 0) {

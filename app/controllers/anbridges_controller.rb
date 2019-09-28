@@ -31,13 +31,12 @@ class AnbridgesController < ApplicationController
 
   def set_contents
     @contents = [
-      { ja: '会社概要', es: 'COMPANY PROFILE', img: 'company_profile.jpg',
+      { ja: 'COMPANY', es: 'COMPANY PROFILE', img: 'company_profile.jpg',
         class: 'company-profile', href: company_path },
-      { ja: '事業内容', es: 'BUSINESS DESCRIPTION', img: 'business_description.jpg',
+      { ja: 'SERVICE', es: 'BUSINESS DESCRIPTION', img: 'business_description.jpg',
         class: 'business-description', href: business_path },
-      { ja: '新卒採用', es: 'GRADUATE RECRUITING', img: 'graduate_recruiting.jpg',
-        class: 'graduate-recruiting', href: graduate_path },
-      { ja: 'キャリア採用', es: 'CAREER OPPORTUNITIES', img: 'career_opportunities.jpg',
-        class: 'career-opportunities', href: career_path }]
+      { ja: 'RECRUIT', es: 'GRADUATE RECRUITING', img: 'graduate_recruiting.jpg',
+        class: 'graduate-recruiting', href: graduate_path }
+    ]
   end
 end

@@ -1,5 +1,6 @@
 class TopsController < ApplicationController
   # GET /tops
-  # GET /tops.json
-  def index; end
+  def index
+    render :index_smart_phone, layout: 'anbridges_smart_phone.html.haml' if request.smart_phone?
+  end
 end

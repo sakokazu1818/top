@@ -1,6 +1,12 @@
+.title-wrap
+  .row
+    .col-12.text-2.text-left.js-text-1= 'CHANGE'
+  .row
+    .col-12.text-3.text-left.js-text-2= 'THE'
+  .row
+    .col-12.text-4.text-left.js-text-3= 'WORLD'
+  .row
+    .col-12.text-1.js-text-4= '- 未来のあるべき姿へ - '
 .video-wrap
   .row
-    .col-12.text-1.text-center= '未来のあるべき姿へ。'
-  .row
-    .col-12.text-2.text-center= 'CHANGE THE WORLD'
-  = video_tag 'top_video.mov', controls: false, autoplay: true, muted: true, loop: true, id: 'video'
+    .col-12= video_tag 'top_video.mov', controls: false, autoplay: true, muted: true, loop: true, id: 'video'
