@@ -34,8 +34,7 @@ body,
 html {
   height: 100%;
   width: 100%;
-  background-color: #000000;
-  font-family: 'Nexa-B', 'MS PGothic', serif;
+  background-color: #FFF;
 
   #loader-bg {
     display: none;
@@ -64,14 +63,11 @@ html {
   }
 
   .main {
-    background-color: #e9e9e9;
-  }
-
-  .main {
-    background-image: url('background_image.png');
+    background: linear-gradient(180deg, #FFF 0%, #FFF 50%, #e4e4ea 50%, #e4e4ea 100%);
+    font-family: 'Nexa-B', 'MS PGothic', serif;
     background-position: center top;
     background-repeat: no-repeat;
-    background-size:auto 95%;
+    background-size:auto 100%;
   }
 
   header {
@@ -335,7 +331,6 @@ html {
     }
   }
 
-
   #anbridges_smart_phone {
     .video-wrap {
       margin-top: 8em;
@@ -396,6 +391,8 @@ html {
   }
 
   .contents {
+    margin-top: 5em;
+
     .card-group {
       height: 16em;
       overflow: hidden;

@@ -2,19 +2,27 @@
 %html
   %head
     %meta{ content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type' }/
+    %meta{ content: 'width=device-width, initial-scale=1, shrink-to-fit=no', name: 'viewport'}/
     %title 株式会社アンブリッジ
+    -# TODO
+    -# = favicon_link_tag('favicon.ico')
     %meta{:content => "転職、就職ならAnbride、面接サポートや履歴書添削も無料、あなたの転職をサポートします", :name => "Description"}/
     = javascript_include_tag "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAbSZbTc-2mgxXNxAVFlTjlhOvqFV3zk-I&callback=initMap"
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+
+    = stylesheet_link_tag  "anbridges", :media => "all"
+    = stylesheet_link_tag  "animate", :media => "all"
+
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
   %body
     #menu-bg
     #loader-bg
       #loader
-        = image_tag 'logo_loading', size: '80x80', alt: 'Now Loading...'
-        %br
-        %br Now Loading...
+        = image_tag 'logo_loading', size: '150x150', alt: 'Now Loading...'
+        .container
+          .row
+            .col-12.text-center.loading NowLoading...
     .main{ id: "#{controller.controller_name}_smart_phone" }
       = render 'column1_smart_phone'
       .container.sf-container

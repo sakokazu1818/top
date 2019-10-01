@@ -24,7 +24,7 @@
             .col-12.text-center.loading NowLoading...
     .main{ id: "#{controller.controller_name}" }
       - if controller.action_name == 'index'
-        .container-fluid= render 'column1'
+        = render 'column1'
       - else
         .container-fluid= render partial: 'page_title', locals: @title
 
@@ -32,6 +32,6 @@
       .container-fluid= yield
       .container-fluid
         %footer
-          .row.pt-3.pb-3.mt-3
+          .row
             .col-12
               = render 'footer'
