@@ -1,6 +1,12 @@
-.video-wrap
+.container-fluid
+  .row.col1
+    .col-12.text-left.js-text-1= 'CHANGE'
   .row
-    .col-12.text-1.text-center= '未来のあるべき姿へ。'
+    .col-12.text-left.js-text-2= 'THE'
   .row
-    .col-12.text-2.text-center= 'CHANGE THE WORLD'
-  = video_tag 'top_video.mov', controls: false, autoplay: true, muted: true, loop: true, id: 'video'
+    .col-12.text-left.js-text-3= 'WORLD'
+  .row
+    .col-12.js-text-4= '- 未来のあるべき姿へ - '
+.container-fluid.pr-0.pl-0
+  .row.mt-5
+    .col-12= image_tag 'hoge.gif', class: 'img-fluid'

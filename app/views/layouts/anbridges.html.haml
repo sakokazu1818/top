@@ -3,17 +3,16 @@
   %head
     %meta{ content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type' }/
     %meta{ content: 'width=device-width, initial-scale=1, shrink-to-fit=no', name: 'viewport'}/
-    %title 株式会社アンブリッジ
-    -# TODO
-    -# = favicon_link_tag('favicon.ico')
+    %meta{:content => "no-cache", :name => "turbolinks-cache-control"}/
     %meta{:content => "転職、就職ならAnbride、面接サポートや履歴書添削も無料、あなたの転職をサポートします", :name => "Description"}/
-    = javascript_include_tag "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAbSZbTc-2mgxXNxAVFlTjlhOvqFV3zk-I&callback=initMap"
-    = csrf_meta_tags
 
+    %title 株式会社アンブリッジ
+    = favicon_link_tag
+    = javascript_include_tag "http://maps.google.com/maps/api/js?key=AIzaSyBIWFzNYwmqEZ08DPLUhqaNKiZ9H154G2o&language=ja"
+    = csrf_meta_tags
     = stylesheet_link_tag  "anbridges", :media => "all"
     = stylesheet_link_tag  "animate", :media => "all"
-
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application'
 
   %body
     #loader-bg

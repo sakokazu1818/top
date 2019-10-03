@@ -70,83 +70,95 @@ html {
     background-size:auto 100%;
   }
 
-  header {
-    z-index: 1;
-    position: fixed;
-    width: 100%;
-    top: 0px;
-    left: 0px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: #fff;
+  #anbridges {
+    header {
+      z-index: 1;
+      position: fixed;
+      width: 100%;
+      top: 0px;
+      left: 0px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color: #fff;
 
-    /* アイコン周り全体 */
-    .flowbtn16 {
-      border-radius: 4px;
-      display: inline-block;
-      width: 4em;
-      height: 2.3em;
-      font-size: 1em;
-      background-color: #444;
-      color: #fff;
-    }
-    .flowbtn16:hover{
-      text-decoration:none;
-    }
-    /* Twitterマウスホバー時 */
-    .flowbtn16.fl_tw2:hover{
-      background: #55acee;
-    }
-    /* Instagramマウスホバー時 */
-    .flowbtn16.insta_btn2:hover{
-      background: #c6529a;
-    }
-    /* Facebookマウスホバー時 */
-    .flowbtn16.fl_fb2:hover{
-      background: #3b5998;
-    }
+      /* アイコン周り全体 */
+      .flowbtn16 {
+        border-radius: 4px;
+        display: inline-block;
+        width: 4em;
+        height: 2.3em;
+        font-size: 1em;
+        background-color: #444;
+        color: #fff;
+      }
+      .flowbtn16:hover{
+        text-decoration:none;
+      }
+      /* Twitterマウスホバー時 */
+      .flowbtn16.fl_tw2:hover{
+        background: #55acee;
+      }
+      /* Instagramマウスホバー時 */
+      .flowbtn16.insta_btn2:hover{
+        background: #c6529a;
+      }
+      /* Facebookマウスホバー時 */
+      .flowbtn16.fl_fb2:hover{
+        background: #3b5998;
+      }
 
-    /* ボタン内テキスト調整 */
-    .flowbtn16 div{
-      font-size: 0.5em;
-      letter-spacing: 0;
-      position: relative;
-      bottom: 5px;
-    }
-    /* ulタグの内側余白を０にする */
-    ul.snsbtniti{
-      padding-left: 0 !important;
-      padding-top: 0.2em !important;
-      margin-left: 2em;
-      margin-bottom: 0;
-    }
-    /* アイコンボタンの位置調整 */
-    .snsbtniti{
-      display: flex;
-      flex-flow: row wrap;
-    }
-    /* アイコンボタン同士の余白調整 */
-    .snsbtniti li{
-      margin-left: 0.5em;
-      text-align: center !important;
-      list-style-type: none;
-    }
+      /* ボタン内テキスト調整 */
+      .flowbtn16 div{
+        font-size: 0.5em;
+        letter-spacing: 0;
+        position: relative;
+        bottom: 5px;
+      }
+      /* ulタグの内側余白を０にする */
+      ul.snsbtniti{
+        padding-left: 0 !important;
+        padding-top: 0.2em !important;
+        margin-left: 2em;
+        margin-bottom: 0;
+      }
+      /* アイコンボタンの位置調整 */
+      .snsbtniti{
+        display: flex;
+        flex-flow: row wrap;
+      }
+      /* アイコンボタン同士の余白調整 */
+      .snsbtniti li{
+        margin-left: 0.5em;
+        text-align: center !important;
+        list-style-type: none;
+      }
 
-    nav {
-      background-color: #FFF;
-      height: 4em;
+      nav {
+        background-color: #FFF;
+        height: 4em;
 
-      .navbar-nav {
-        font-size: 1.2em;
-        a {
-          font-weight: bold;
-          color: #000 !important;
-          display: block;
-          padding: 0 0 5px;
-          text-decoration: none;
-        }
+        .navbar-nav {
+          font-size: 1.2em;
+          a {
+            font-weight: bold;
+            color: #000 !important;
+            display: block;
+            text-decoration: none;
+          }
 
-        .active {
+          .active {
+            a::after {
+              border-bottom: solid 3px #87CEFA;
+              bottom: 0;
+              content: "";
+              display: block;
+              transition: all .3s ease;
+              -webkit-transition: all .3s ease;
+              width: 0;
+              width: 100%;
+            }
+          }
+
           a::after {
             border-bottom: solid 3px #87CEFA;
             bottom: 0;
@@ -155,45 +167,173 @@ html {
             transition: all .3s ease;
             -webkit-transition: all .3s ease;
             width: 0;
+          }
+
+          a:hover::after {
             width: 100%;
           }
         }
 
-        a::after {
-          border-bottom: solid 3px #87CEFA;
-          bottom: 0;
-          content: "";
-          display: block;
-          transition: all .3s ease;
-          -webkit-transition: all .3s ease;
-          width: 0;
+        .navbar-brand img {
+          padding-left: 5em;
+          height: 3em;
         }
 
-        a:hover::after {
-          width: 100%;
+        #pr-5 {
+          padding-left: 5em;
         }
       }
+    }
 
-      .navbar-brand img {
-        padding-left: 5em;
-        height: 3em;
+    .title-wrap {
+      width: 100%;
+      height: 660px;
+
+      .text-1, .text-2, .text-3, .text-4 {
+        color: #000;
+        font-size: 800%;
+        position: absolute;
       }
 
-      #pr-5 {
+      .text-1 {
         padding-left: 5em;
+        top: 540px;
+        font-size: 180%;
       }
+
+      .text-2 {
+        padding-left: 1em;
+        top: 150px;
+      }
+
+      .text-3 {
+        padding-left: 1em;
+        top: 270px;
+      }
+
+      .text-4 {
+        padding-left: 1em;
+        top: 380px;
+      }
+    }
+
+    .video-wrap {
+      width: 100%;
+
+      #video {
+        width: 100%;
+      }
+    }
+
+    .content {
+      height: 50em;
+    }
+
+    .content-title1 {
+      margin-top: 4em;
+      font-size: 3em;
+      color: #fff;
+    }
+
+    .content-title2 {
+      margin-top: 4em;
+      font-size: 3em;
+      color: #fff;
+    }
+
+    .content-title3 {
+      margin-top: 4em;
+      font-size: 3em;
+      color: #fff;
+    }
+
+    .content-text {
+      font-size: 2em;
+      color: #fff;
+    }
+
+    .content-text2{
+      font-size: 1em;
+      color: #fff;
+      line-height: 2;
+    }
+
+    .content-title1::after {
+      position: absolute;
+      bottom: -5px;
+      left: 0.35em;
+      content: '';
+      width: 5em;
+      height: 0.2em;
+      background: #87CEFA;
+      transform: scale(0, 1);
+      transform-origin: left top;
+      transition: transform .3s;
+    }
+
+    .content-title1:hover::after {
+      transform: scale(1, 1);
+    }
+
+    .content-title2::after {
+      position: absolute;
+      bottom: -5px;
+      left: 0.35em;
+      content: '';
+      width: 4.2em;
+      height: 0.2em;
+      background: #87CEFA;
+      transform: scale(0, 1);
+      transform-origin: left top;
+      transition: transform .3s;
+    }
+
+    .content-title2:hover::after {
+      transform: scale(1, 1);
+    }
+
+    .content-title3::after {
+      position: absolute;
+      bottom: -5px;
+      left: 0.35em;
+      content: '';
+      width: 4.2em;
+      height: 0.2em;
+      background: #87CEFA;
+      transform: scale(0, 1);
+      transform-origin: left top;
+      transition: transform .3s;
+    }
+
+    .content-title3:hover::after {
+      transform: scale(1, 1);
+    }
+
+    .more {
+      padding-top: 2em;
+      padding-bottom: 2em;
+      padding-left: 5em;
+      padding-right: 5em;
     }
   }
 
   #anbridges_smart_phone {
     header {
+      width: 100%;
+      z-index: 1;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      padding-top: 1em;
+      background-color: #fff;
+
       nav {
         background-color: #FFF;
-        height: 6em;
-        font-size: 2em;
+        height: 3em;
+        font-size: 1em;
 
         .navbar-brand img {
-          height: 6em;
+          height: 2em;
         }
 
         .hamburger-menu {
@@ -201,6 +341,10 @@ html {
           color: #000;
         }
       }
+    }
+
+    .col1 {
+      margin-top: 7em;
     }
   }
 
@@ -289,52 +433,6 @@ html {
     width: 100%;
     height: 100%;
     z-index: 1;
-  }
-
-  .title-wrap {
-    width: 100%;
-    height: 660px;
-
-    .text-1, .text-2, .text-3, .text-4 {
-      color: #000;
-      font-size: 800%;
-      position: absolute;
-    }
-
-    .text-1 {
-      padding-left: 5em;
-      top: 540px;
-      font-size: 180%;
-    }
-
-    .text-2 {
-      padding-left: 1em;
-      top: 150px;
-    }
-
-    .text-3 {
-      padding-left: 1em;
-      top: 270px;
-    }
-
-    .text-4 {
-      padding-left: 1em;
-      top: 380px;
-    }
-  }
-
-  .video-wrap {
-    width: 100%;
-
-    #video {
-      width: 100%;
-    }
-  }
-
-  #anbridges_smart_phone {
-    .video-wrap {
-      margin-top: 8em;
-    }
   }
 
   .sf-container {

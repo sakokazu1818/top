@@ -1,5 +1,26 @@
 .contents.mb-5.pt-3
-  - @contents.each do |n|
-    .row
+  - @contents.each.with_index(1) do |n, i|
+    .row.content
       .col-3
-      .col-9= image_tag(n[:img], class: 'img-fluid ')
+      .col-9{ class: n[:class] }
+        .row
+          .col-1
+          .col-11{ class: "content-title#{i}" }= n[:ja]
+        .row.mt-3
+          .col-1
+          .col-11.content-text= '世界中に、アタリマエと幸せを'
+        .row.mt-3
+          .col-1
+          .col-11.content-text2= 'テキストテキストテキストテキストテキストテキストテキスト'
+        .row
+          .col-1
+          .col-11.content-text2= 'テキストテキストテキストテキストテキストテキストテキスト'
+        .row
+          .col-1
+          .col-11.content-text2= 'テキストテキストテキストテキストテキストテキストテキスト'
+        .row.mt-5
+          .col-1
+          .col-11
+            = link_to '#', class: 'page-link text-dark d-inline-block more' do
+              = 'View More'
+              %i.fa.fa-angle-right.pl-3

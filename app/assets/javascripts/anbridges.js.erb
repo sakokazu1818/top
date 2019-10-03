@@ -125,6 +125,24 @@ $(document).on('turbolinks:load', function() {
 
   if ($anbridges.length == 0) {
     $anbridges = $('#anbridges_smart_phone');
+    let video = document.querySelector('video')
+    setTimeout(showPage, 10000);
+
+    // TODO
+    // if (video != null) {
+    //   video.oncanplay = function(){
+    //     setTimeout(showPage, 2000);
+    //   }
+    // }
+
+  } else {
+    let video = document.querySelector('video')
+
+    if (video != null) {
+      video.oncanplaythrough = function(){
+        setTimeout(showPage, 2000);
+      }
+    }
   }
 
   if ($anbridges.length == 0) {
@@ -155,14 +173,6 @@ $(document).on('turbolinks:load', function() {
     infowindow.open(map, marker);
   });
 
-  let video = document.querySelector('video')
-
-  if (video != null) {
-    video.oncanplaythrough = function(){
-      setTimeout(showPage, 2000);
-    }
-  }
-
   $('.nav-item').on('click', function() {
     $anbridges.hide();
   });
@@ -182,10 +192,7 @@ $(document).on('turbolinks:load', function() {
   contents();
 })
 
-$(window).on('turbolinks:load', function() {
-  if (document.querySelector('video') != null) {
-    return false;
-  }
+$(document).on('turbolinks:render', function() {
 
   setTimeout(showPage, 2000);
 });
