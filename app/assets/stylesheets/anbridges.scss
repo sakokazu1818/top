@@ -364,7 +364,7 @@ html {
         color: #FFF;
         background-color: #000;
         height: 3em;
-        width: 60%;
+        width: 55%;
         font-size: 3em;
         display: -webkit-flex;
         display: flex;
@@ -381,8 +381,7 @@ html {
         position: relative;
         left: 10%;
         background-image: url('misson.jpg');
-        background-position: center center;
-        background-repeat: no-repeat;
+        background-position: center 55%;
         background-size:cover;
       }
     }
