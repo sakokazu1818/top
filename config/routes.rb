@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/business', to: 'anbridges#business'
   get '/graduate', to: 'anbridges#graduate'
   get '/career', to: 'anbridges#career'
+  get '/misson', to: 'anbridges#misson'
 
   scope :admin do
     resource :sessions, only: [:new, :create, :destroy]

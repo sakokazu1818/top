@@ -33,6 +33,8 @@ class AnbridgesController < ApplicationController
     @contents = [
       { ja: 'COMPANY', es: 'COMPANY PROFILE', img: 'company_profile.jpg',
         class: 'company-profile', href: company_path },
+      { ja: 'MISSON', es: 'GRADUATE RECRUITING', img: 'graduate_recruiting.jpg',
+        class: 'graduate-recruiting', href: misson_path },
       { ja: 'SERVICE', es: 'BUSINESS DESCRIPTION', img: 'business_description.jpg',
         class: 'business-description', href: business_path },
       { ja: 'RECRUIT', es: 'GRADUATE RECRUITING', img: 'graduate_recruiting.jpg',

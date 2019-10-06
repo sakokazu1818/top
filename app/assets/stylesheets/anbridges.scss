@@ -247,6 +247,12 @@ html {
       color: #fff;
     }
 
+    .content-title4 {
+      margin-top: 4em;
+      font-size: 3em;
+      color: #fff;
+    }
+
     .content-text {
       font-size: 2em;
       color: #fff;
@@ -280,7 +286,7 @@ html {
       bottom: -5px;
       left: 0.35em;
       content: '';
-      width: 4.2em;
+      width: 3.9em;
       height: 0.2em;
       background: #87CEFA;
       transform: scale(0, 1);
@@ -306,6 +312,23 @@ html {
     }
 
     .content-title3:hover::after {
+      transform: scale(1, 1);
+    }
+
+    .content-title4::after {
+      position: absolute;
+      bottom: -5px;
+      left: 0.35em;
+      content: '';
+      width: 4.2em;
+      height: 0.2em;
+      background: #87CEFA;
+      transform: scale(0, 1);
+      transform-origin: left top;
+      transition: transform .3s;
+    }
+
+    .content-title4:hover::after {
       transform: scale(1, 1);
     }
 
