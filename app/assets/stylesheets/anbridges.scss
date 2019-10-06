@@ -614,6 +614,14 @@ html {
     background-image: url('company_profile.jpg') !important;
   }
 
+  .company-profile1 {
+    background-color: #ffffff;
+    background-image: url('company_profile.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
   .business-description {
     background-image: url('business_description.jpg');
   }
