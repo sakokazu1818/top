@@ -72,7 +72,7 @@ html {
 
   #anbridges {
     header {
-      z-index: 1;
+      z-index: 4;
       position: fixed;
       width: 100%;
       top: 0px;
@@ -350,6 +350,40 @@ html {
           color: #FFF;
           font-size: 4em;
         }
+      }
+    }
+
+    .page-title2 {
+      background-color: #FFF;
+      margin-top: 10em;
+
+      .title-1 {
+        z-index: 3;
+        padding-left: 1em;
+        margin-right: 0 !important;
+        color: #FFF;
+        background-color: #000;
+        height: 3em;
+        width: 60%;
+        font-size: 3em;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        position: relative;
+        top: -4em;
+      }
+
+      .title-2 {
+        z-index: 0;
+        height: 10em;
+        width: 90%;
+        position: relative;
+        left: 10%;
+        background-image: url('company_profile.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
       }
     }
 

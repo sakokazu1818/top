@@ -27,6 +27,9 @@ class AnbridgesController < ApplicationController
     @title = { title_ja: 'キャリア採用', title_es: 'CAREER OPPORTUNITIES' }
   end
 
+  def misson
+  end
+
   private
 
   def set_contents

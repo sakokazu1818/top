@@ -22,8 +22,13 @@
           .row
             .col-12.text-center.loading NowLoading...
     .main{ id: "#{controller.controller_name}" }
-      - if controller.action_name == 'index'
+      - case controller.action_name
+      - when 'index' then
         = render 'column1'
+      - when 'company' then
+        .container-fluid.page-title.company-profile1= render partial: 'page_title', locals: @title
+      - when 'misson' then
+        .container-fluid.page-title2= render partial: 'page_title2', locals: @title
       - else
         .container-fluid.page-title.company-profile1= render partial: 'page_title', locals: @title
 
