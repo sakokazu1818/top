@@ -8,16 +8,11 @@
           .col-11{ class: "content-title#{i}" }= n[:ja]
         .row.mt-3
           .col-1
-          .col-11.content-text= '世界中に、アタリマエと幸せを'
-        .row.mt-3
-          .col-1
-          .col-11.content-text2= 'テキストテキストテキストテキストテキストテキストテキスト'
-        .row
-          .col-1
-          .col-11.content-text2= 'テキストテキストテキストテキストテキストテキストテキスト'
-        .row
-          .col-1
-          .col-11.content-text2= 'テキストテキストテキストテキストテキストテキストテキスト'
+          .col-11.content-text= n[:title]
+        - n[:text].each do |t|
+          .row.mt-3
+            .col-1
+            .col-11.content-text2= t
         .row.mt-5
           .col-1
           .col-11
