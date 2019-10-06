@@ -1,8 +1,27 @@
-= stylesheet_link_tag "anbridges", :media => "all"
-.pt-5.pb-5= render partial: 'category_title', locals: { text: 'テクノロジーの力で、未来の日本を創る' }
-.pt-5.pb-5= render partial: 'category_title2', locals: { text_ja: '企業理念', text_es: 'VISION' }
-.pt-5.pb-5= render partial: 'category_title2', locals: { text_ja: '会社概要', text_es: 'PROFILE' }
-.pt-5.pb-5= render partial: 'category_title2', locals: { text_ja: '役員一覧', text_es: 'OFFICER' }
-.pt-5.pb-5= render partial: 'category_title2', locals: { text_ja: '沿革', text_es: 'HISTORY' }
-.pt-5.pb-5= render partial: 'category_title2', locals: { text_ja: 'アクセス', text_es: 'ACCESS' }
-= render 'google_map'
+.row.company.pt-5.pb-5
+  .col-6
+    .row.content-area
+      .col-4.mt-2.title 会　社　名
+      .col-8.mt-2.text 株式会社バズフック　［ BUZZHOOK Inc. ］
+    .row.content-area
+      .col-4.mt-2.title 設　立
+      .col-8.mt-2.text 2009年8月
+    .row.content-area
+      .col-4.mt-2.title 所　在　地
+      .col-8.mt-2.text 〒810-0022　福岡市中央区薬院1丁目12-30 BUZZHAUS 1階
+    .row.content-area
+      .col-4.mt-2.title 連　絡　先
+      .col-8.mt-2.text t. 092-738-6767　/　f. 092-738-6775
+    .row.content-area
+      .col-4.mt-2.title 役　員
+      .col-8.mt-2.text= simple_format("代表取締役　波田 龍司\n取締役　伊藤 明香")
+    .row.content-area
+      .col-4.mt-2.title 従　業　員
+      .col-8.mt-2.text 社員 15名 / アルバイト 6名
+    .row.content-area
+      .col-4.mt-2.title 登　録
+      .col-8.mt-2.text プライバシーマーク　第18830027(03)
+    .row.content-area.bb
+      .col-4.mt-2.title 顧問弁護士
+      .col-8.mt-2.text 上野光典法律事務所
+  .col-6= render 'google_map'

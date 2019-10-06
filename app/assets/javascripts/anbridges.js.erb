@@ -192,7 +192,12 @@ $(document).on('turbolinks:load', function() {
   contents();
 })
 
-$(document).on('turbolinks:render', function() {
+$(document).on('turbolinks:load', function() {
+  let video = document.querySelector('video')
+  if (video != null) {
+    return;
+  }
 
+  // トップ以外
   setTimeout(showPage, 2000);
 });

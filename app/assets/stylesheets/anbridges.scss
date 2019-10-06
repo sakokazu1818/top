@@ -185,38 +185,6 @@ html {
       }
     }
 
-    .title-wrap {
-      width: 100%;
-      height: 660px;
-
-      .text-1, .text-2, .text-3, .text-4 {
-        color: #000;
-        font-size: 800%;
-        position: absolute;
-      }
-
-      .text-1 {
-        padding-left: 5em;
-        top: 540px;
-        font-size: 180%;
-      }
-
-      .text-2 {
-        padding-left: 1em;
-        top: 150px;
-      }
-
-      .text-3 {
-        padding-left: 1em;
-        top: 270px;
-      }
-
-      .text-4 {
-        padding-left: 1em;
-        top: 380px;
-      }
-    }
-
     .video-wrap {
       width: 100%;
 
@@ -314,6 +282,56 @@ html {
       padding-bottom: 2em;
       padding-left: 5em;
       padding-right: 5em;
+    }
+
+    .page-title {
+      background-color: #FFF;
+      margin-top: 8em;
+
+      .title {
+        height: 30em;
+        padding-top: 10em;
+        .text {
+          color: #FFF;
+          font-size: 4em;
+        }
+      }
+    }
+
+    .company {
+      background-color: #FFF;
+      .content-area {
+        height: 5em;
+        border-top: 1px solid #cbcbcb;
+        margin-left: 0.5em;
+
+        .title {
+          font-size: 0.8em;
+          font-weight: bold;
+          background-color: #f2f2f2;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-align-items: center;
+          align-items: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+        }
+
+        .text {
+          font-size: 0.8em;
+          font-weight: normal;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-align-items: center;
+          align-items: center;
+          -webkit-justify-content: center;
+          justify-content: left;
+        }
+      }
+
+      .bb {
+        border-bottom: 1px solid #cbcbcb;
+      }
     }
   }
 
@@ -505,22 +523,6 @@ html {
       overflow: hidden;
     }
 
-    .company-profile {
-      background-image: url('company_profile.jpg');
-    }
-
-    .business-description {
-      background-image: url('business_description.jpg');
-    }
-
-    .graduate-recruiting {
-      background-image: url('graduate_recruiting.jpg');
-    }
-
-    .career-opportunities {
-      background-image: url('career_opportunities.jpg');
-    }
-
     .text {
       background-color: rgba(0, 0, 0, 0.8);
 
@@ -557,45 +559,6 @@ html {
     width: 100%;
   }
 
-  .page-title-wrap {
-    position: relative;
-    width: 100%;
-
-    #title-bg {
-      width: 100%;
-    }
-
-    .text-1, .text-2 {
-      color: #fff;
-      font-size: 100%;
-      position: absolute;
-      z-index: 1;
-    }
-
-    .text-1 {
-      padding-left: 1em;
-      font-size: 200%;
-      top: 150px;
-    }
-
-    .text-2 {
-      padding-left: 2em;
-      top: 200px;
-    }
-  }
-
-  .category-title {
-    height: 8em;
-    background-color: #ECECEC;
-    background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
-    -webkit-background-size: 7px 7px;
-
-    .text {
-      padding-top: 1.3em;
-      font-size: 200%;
-    }
-  }
-
   .category-title2 {
     background-color: #FFFFFF;
     background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #000000), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #000000),color-stop(.75, #000000), color-stop(.75, transparent),to(transparent));
@@ -613,5 +576,21 @@ html {
   .tag {
     background-color: #000;
     color: #FFF;
+  }
+
+  .company-profile {
+    background-image: url('company_profile.jpg') !important;
+  }
+
+  .business-description {
+    background-image: url('business_description.jpg');
+  }
+
+  .graduate-recruiting {
+    background-image: url('graduate_recruiting.jpg');
+  }
+
+  .career-opportunities {
+    background-image: url('career_opportunities.jpg');
   }
 }

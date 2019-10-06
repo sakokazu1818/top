@@ -25,7 +25,7 @@
       - if controller.action_name == 'index'
         = render 'column1'
       - else
-        .container-fluid= render partial: 'page_title', locals: @title
+        .container.page-title.company-profile= render partial: 'page_title', locals: @title
 
       .container-fluid= render 'header'
       .container-fluid= yield
