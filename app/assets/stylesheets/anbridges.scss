@@ -185,6 +185,38 @@ html {
       }
     }
 
+    .title-wrap {
+      width: 100%;
+      height: 660px;
+
+      .text-1, .text-2, .text-3, .text-4 {
+        color: #000;
+        font-size: 800%;
+        position: absolute;
+      }
+
+      .text-1 {
+        padding-left: 5em;
+        top: 540px;
+        font-size: 180%;
+      }
+
+      .text-2 {
+        padding-left: 1em;
+        top: 150px;
+      }
+
+      .text-3 {
+        padding-left: 1em;
+        top: 270px;
+      }
+
+      .text-4 {
+        padding-left: 1em;
+        top: 380px;
+      }
+    }
+
     .video-wrap {
       width: 100%;
 
