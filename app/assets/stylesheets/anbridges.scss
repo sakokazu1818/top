@@ -380,10 +380,10 @@ html {
         width: 90%;
         position: relative;
         left: 10%;
-        background-image: url('company_profile.jpg');
+        background-image: url('misson.jpg');
         background-position: center center;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        background-size:cover;
       }
     }
 
@@ -420,6 +420,25 @@ html {
 
       .bb {
         border-bottom: 1px solid #cbcbcb;
+      }
+    }
+
+    .misson {
+      background-color: #FFF;
+
+      .title-en {
+        color: #f2f2f2;
+        padding-left: 0.4em;
+        font-size: 6em;
+      }
+
+      .title-ja {
+        color: #000;
+        font-size: 2em;
+        z-index: 1;
+        position: relative;
+        top: -2em;
+        left: 1.8em;
       }
     }
   }
