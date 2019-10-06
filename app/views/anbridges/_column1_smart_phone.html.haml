@@ -9,4 +9,5 @@
     .col-12.js-text-4= '- 未来のあるべき姿へ - '
 .container-fluid.pr-0.pl-0
   .row.mt-5
-    .col-12= image_tag 'hoge.gif', class: 'img-fluid'
+    .col-12= video_tag 'top_video.mov', controls: false, autoplay: true,
+      muted: true, loop: true, id: 'video', class: 'img-fluid'
