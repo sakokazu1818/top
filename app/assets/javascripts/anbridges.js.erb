@@ -1,18 +1,10 @@
-function showPage() {
-  let $anbridges = $('#anbridges');
-
-  if ($anbridges.length == 0) {
-    $anbridges = $('#anbridges_smart_phone');
-  }
-
-  if ($anbridges.length == 0) {
-    return false;
-  }
-
+function showPage($anbridges) {
   $('#loader-bg').delay(900).fadeOut(800);
   $('#loader').hide();
   $anbridges.show();
+}
 
+function textEffect() {
   $('.js-text-1').textillate({
       initialDelay: 500,
       autoStart: true,
@@ -70,33 +62,60 @@ function showPage() {
   });
 }
 
-function contents() {
-  var width, height;
-  $('.card').hover(function() {
-    var zoom = 1.2;
-    var $img = $(this).find('img');
+function showIndex($anbridges) {
+  let video = document.querySelector('video')
 
-    if (width == null) {
-      width = $img.width();
-      height = $img.height();
-    }
+  video.oncanplaythrough = function() {
+    showPage($anbridges);
+    textEffect();
+  }
+}
 
-    //画像を拡大
-    $img.stop(false,true).animate(
-      {'width': width * zoom, 'height': height * zoom},
-      {duration: 300}
-    );
-  },
-  function() {
-    //画像リセット
-    $(this).find('img').stop(false,true).animate(
-      {'width': width, 'height': height},
-      {duration: 300}
-    );
+  // 住所
+  // let location = { lat: 35.703315, lng: 139.755527 };
+  // let map = new google.maps.Map(document.getElementById('map'), { zoom: 15, center: location });
+
+  //google mapsインスタンス化
+  // let transitLayer = new google.maps.TransitLayer();
+  // transitLayer.setMap(map);
+
+  // マーカーを押したときにポップアップで出る情報
+  // let contentString = '住所：東京都文京区本郷1-4-4 水道橋ビル6階';
+  // let infowindow = new google.maps.InfoWindow({content: contentString});
+
+  //マーカーの実体を作る
+  // let marker = new google.maps.Marker({position:location,map: map,title: contentString});
+
+  //マーカーをクリックできるようにする
+  // marker.addListener('click', function() {
+  //   infowindow.open(map, marker);
+  // });
+
+  // contents();
+
+
+function setSpHeder() {
+  $("#hamburger-menu-item").hide();
+
+  $('.hamburger-menu').on('click', function() {
+    $("#hamburger-menu-item").show( 'slide', { direction: 'right' } , 1000 );
+    $('#menu-bg').css('visibility', 'visible');
+  });
+
+  $('#menu-bg').on('click', function() {
+    $('#menu-bg').css('visibility', 'hidden');
+    $("#hamburger-menu-item").hide( 'slide', { direction: 'right' } , 1000 );
   });
 }
 
-$(document).on('turbolinks:load', function() {
+function setPcHeder() {
+  $('.nav-item').on('click', function() {
+    $anbridges.hide();
+  });
+}
+
+function loader() {
+  $('#loader-bg, #loader').height($(window).height()).css('display','block');
   $('.loading').textillate({
       loop: true,
       minDisplayTime: 1000,
@@ -120,84 +139,57 @@ $(document).on('turbolinks:load', function() {
         shuffle: false
       }
   });
+}
+
+// メイン処理
+$(document).on('turbolinks:load', function() {
+  loader();
 
   let $anbridges = $('#anbridges');
-
   if ($anbridges.length == 0) {
     $anbridges = $('#anbridges_smart_phone');
-    let video = document.querySelector('video')
-    setTimeout(showPage, 10000);
-
-    // TODO
-    // if (video != null) {
-    //   video.oncanplay = function(){
-    //     setTimeout(showPage, 2000);
-    //   }
-    // }
-
+    setSpHeder();
   } else {
-    let video = document.querySelector('video')
-
-    if (video != null) {
-      video.oncanplaythrough = function(){
-        setTimeout(showPage, 2000);
-      }
-    }
+    setPcHeder();
   }
 
-  if ($anbridges.length == 0) {
-    return false;
-  }
+  // TODO
+  showPage($anbridges);
+  return;
 
-  $anbridges.hide();
-
-  $('#loader-bg, #loader').height($(window).height()).css('display','block');
-
-  // 住所
-  // let location = { lat: 35.703315, lng: 139.755527 };
-  // let map = new google.maps.Map(document.getElementById('map'), { zoom: 15, center: location });
-
-  //google mapsインスタンス化
-  // let transitLayer = new google.maps.TransitLayer();
-  // transitLayer.setMap(map);
-
-  // マーカーを押したときにポップアップで出る情報
-  // let contentString = '住所：東京都文京区本郷1-4-4 水道橋ビル6階';
-  // let infowindow = new google.maps.InfoWindow({content: contentString});
-
-  //マーカーの実体を作る
-  // let marker = new google.maps.Marker({position:location,map: map,title: contentString});
-
-  //マーカーをクリックできるようにする
-  // marker.addListener('click', function() {
-  //   infowindow.open(map, marker);
-  // });
-
-  $('.nav-item').on('click', function() {
-    $anbridges.hide();
-  });
-
-  $("#hamburger-menu-item").hide();
-
-  $('.hamburger-menu').on('click', function() {
-    $("#hamburger-menu-item").show( 'slide', { direction: 'right' } , 1000 );
-    $('#menu-bg').css('visibility', 'visible');
-  });
-
-  $('#menu-bg').on('click', function() {
-    $('#menu-bg').css('visibility', 'hidden');
-    $("#hamburger-menu-item").hide( 'slide', { direction: 'right' } , 1000 );
-  });
-
-  contents();
-})
-
-$(document).on('turbolinks:load', function() {
-  let video = document.querySelector('video')
+  let video = document.querySelector('video');
   if (video != null) {
+    showIndex($anbridges);
     return;
   }
 
   // トップ以外
   setTimeout(showPage, 2000);
 });
+
+
+// function contents() {
+//   var width, height;
+//   $('.card').hover(function() {
+//     var zoom = 1.2;
+//     var $img = $(this).find('img');
+//
+//     if (width == null) {
+//       width = $img.width();
+//       height = $img.height();
+//     }
+//
+//     //画像を拡大
+//     $img.stop(false,true).animate(
+//       {'width': width * zoom, 'height': height * zoom},
+//       {duration: 300}
+//     );
+//   },
+//   function() {
+//     //画像リセット
+//     $(this).find('img').stop(false,true).animate(
+//       {'width': width, 'height': height},
+//       {duration: 300}
+//     );
+//   });
+// }
