@@ -108,10 +108,29 @@ function setSpHeder() {
   });
 }
 
-function setPcHeder() {
-  $('.nav-item').on('click', function() {
-    $anbridges.hide();
-  });
+function setPcHeder($anbridges) {
+  let $navItem = $($anbridges.find('.navbar-nav')[1]).find('.nav-item');
+  let path = location.pathname;
+
+  switch (location.pathname) {
+    case '/company':
+      $($navItem[1]).addClass('active');
+      break;
+    case '/misson':
+      $($navItem[2]).addClass('active');
+      break;
+    case '/business':
+      $($navItem[3]).addClass('active');
+      // TODO
+      break;
+    case '/graduate':
+      $($navItem[4]).addClass('active');
+      // TODO
+      break;
+    default:
+      $($navItem[0]).addClass('active');
+      break;
+  }
 }
 
 function loader() {
@@ -150,12 +169,12 @@ $(document).on('turbolinks:load', function() {
     $anbridges = $('#anbridges_smart_phone');
     setSpHeder();
   } else {
-    setPcHeder();
+    setPcHeder($anbridges);
   }
 
   // TODO
-  showPage($anbridges);
-  return;
+  // showPage($anbridges);
+  // return;
 
   let video = document.querySelector('video');
   if (video != null) {

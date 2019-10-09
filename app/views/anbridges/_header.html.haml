@@ -5,7 +5,7 @@
       %ul.navbar-nav.mr-auto
       %ul.navbar-nav
         - ([{ ja: 'TOP', href: root_path }] + @contents).each_with_index do |c, i|
-          %li.nav-item{ class: i.zero? ? 'active' : ''}
+          %li.nav-item
             %a.nav-link{:href => c[:href].present? ? c[:href] : '#'}
               %span.bb= c[:ja]
       %ul.snsbtniti
