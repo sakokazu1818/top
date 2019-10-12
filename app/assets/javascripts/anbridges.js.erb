@@ -132,39 +132,39 @@ $(document).on('turbolinks:load', function() {
   let $anbridges = $('#anbridges');
   let $navItem = $($anbridges.find('.navbar-nav')[1]).find('.nav-item');
 
-  switch (location.pathname) {
-    case '/company':
-      $($navItem[1]).addClass('active');
-      setTimeout(showPage, 2000);
-      break;
-    case '/misson':
-      $($navItem[2]).addClass('active');
-      setTimeout(showPage, 2000);
-      break;
-    case '/business':
-      $($navItem[3]).addClass('active');
-      setTimeout(showPage, 2000);
-      // TODO
-      break;
-    case '/graduate':
-      $($navItem[4]).addClass('active');
-      setTimeout(showPage, 2000);
-      // TODO
-      break;
-    default:
-      if ($anbridges.length == 0) {
-        $anbridges = $('#anbridges_smart_phone');
-        setSpHeder();
+  if ($anbridges.length == 0) {
+    $anbridges = $('#anbridges_smart_phone');
+    setSpHeder();
+    setTimeout(showPage, 2000);
+  } else {
+    switch (location.pathname) {
+      case '/company':
+        $($navItem[1]).addClass('active');
         setTimeout(showPage, 2000);
-      } else {
+        break;
+      case '/misson':
+        $($navItem[2]).addClass('active');
+        setTimeout(showPage, 2000);
+        break;
+      case '/business':
+        $($navItem[3]).addClass('active');
+        setTimeout(showPage, 2000);
+        // TODO
+        break;
+      case '/graduate':
+        $($navItem[4]).addClass('active');
+        setTimeout(showPage, 2000);
+        // TODO
+        break;
+      default:
         let video = document.querySelector('video');
         $($navItem[0]).addClass('active');
 
         video.oncanplaythrough = function() {
           showPage();
         }
-      }
-      break;
+        break;
+    }
   }
 });
 

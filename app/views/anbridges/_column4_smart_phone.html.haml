@@ -1,18 +1,15 @@
-.contents.mb-5.pt-2
+.contents.mb-5.mt-5
   - @contents.each.with_index(1) do |n, i|
     .row.content
       .col-12{ class: n[:class] }
         .row
-          .col-1
-          .col-11{ class: "content-title#{i}" }= n[:ja]
+          .col-12{ class: "content-title#{i}" }= n[:ja]
         .row.mt-3.mb-2
-          .col-1
-          .col-11.content-text= n[:title]
+          .col-12.content-text= n[:title]
         - n[:text].each do |t|
           .row
-            .col-1
-            .col-11.content-text2= t
-        .row.mt-5.mb-4
+            .col-12.content-text2= t
+        .row.mt-3.mb-4
           .col-5
           .col-7
             = link_to n[:href], class: 'page-link text-dark d-inline-block more float-right' do

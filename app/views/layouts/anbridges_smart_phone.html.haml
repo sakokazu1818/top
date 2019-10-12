@@ -24,5 +24,14 @@
             .col-12.text-center.loading NowLoading...
     .main{ id: "#{controller.controller_name}_smart_phone" }
       .container-fluid= render 'header_smart_phone'
-      = render 'column1_smart_phone'
+      - case controller.action_name
+      - when 'index' then
+        = render 'column1_smart_phone'
+      - when 'company' then
+        .container-fluid.page-title.company-profile1= render partial: 'page_title', locals: @title
+      - when 'misson' then
+        .container-fluid.page-title2= render partial: 'page_title2', locals: @title
+      - else
+        .container-fluid.page-title.company-profile1= render partial: 'page_title', locals: @title
+
       .container-fluid= yield

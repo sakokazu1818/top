@@ -13,6 +13,8 @@ class AnbridgesController < ApplicationController
 
   def company
     @title = { title_ja: '会社概要', title_es: 'COMPANY PROFILE' }
+
+    render :company_smart_phone, layout: 'anbridges_smart_phone.html.haml' if request.smart_phone?
   end
 
   def business
