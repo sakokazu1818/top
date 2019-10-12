@@ -530,6 +530,20 @@ html {
       }
     }
 
+    .page-title {
+      background-color: #FFF;
+      margin-top: 8em;
+
+      .title {
+        height: 10em;
+        padding-top: 3em;
+        .text {
+          color: #FFF;
+          font-size: 2em;
+        }
+      }
+    }
+
     .col1 {
       margin-top: 7em;
     }
@@ -537,8 +551,9 @@ html {
 
   #hamburger-menu-item {
     height: 100%;
-    width: 50%;
-    font-size: 2em;
+    width: 80%;
+    max-width: 16em;
+    font-size: 1em;
     position: fixed;
     right: 0px;
     top: 0px;
