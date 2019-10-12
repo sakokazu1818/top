@@ -1,7 +1,7 @@
-function showPage($anbridges) {
+function showPage() {
   $('#loader-bg').delay(900).fadeOut(800);
   $('#loader').hide();
-  $anbridges.show();
+  textEffect();
 }
 
 function textEffect() {
@@ -62,15 +62,6 @@ function textEffect() {
   });
 }
 
-function showIndex($anbridges) {
-  let video = document.querySelector('video')
-
-  video.oncanplaythrough = function() {
-    showPage($anbridges);
-    textEffect();
-  }
-}
-
   // 住所
   // let location = { lat: 35.703315, lng: 139.755527 };
   // let map = new google.maps.Map(document.getElementById('map'), { zoom: 15, center: location });
@@ -108,33 +99,8 @@ function setSpHeder() {
   });
 }
 
-function setPcHeder($anbridges) {
-  let $navItem = $($anbridges.find('.navbar-nav')[1]).find('.nav-item');
-  let path = location.pathname;
-
-  switch (location.pathname) {
-    case '/company':
-      $($navItem[1]).addClass('active');
-      break;
-    case '/misson':
-      $($navItem[2]).addClass('active');
-      break;
-    case '/business':
-      $($navItem[3]).addClass('active');
-      // TODO
-      break;
-    case '/graduate':
-      $($navItem[4]).addClass('active');
-      // TODO
-      break;
-    default:
-      $($navItem[0]).addClass('active');
-      break;
-  }
-}
-
 function loader() {
-  $('#loader-bg, #loader').height($(window).height()).css('display','block');
+  $('#loader-bg, #loader').height($(window).height()+100).css('display','block');
   $('.loading').textillate({
       loop: true,
       minDisplayTime: 1000,
@@ -163,27 +129,43 @@ function loader() {
 // メイン処理
 $(document).on('turbolinks:load', function() {
   loader();
-
   let $anbridges = $('#anbridges');
-  if ($anbridges.length == 0) {
-    $anbridges = $('#anbridges_smart_phone');
-    setSpHeder();
-  } else {
-    setPcHeder($anbridges);
+  let $navItem = $($anbridges.find('.navbar-nav')[1]).find('.nav-item');
+
+  switch (location.pathname) {
+    case '/company':
+      $($navItem[1]).addClass('active');
+      setTimeout(showPage, 2000);
+      break;
+    case '/misson':
+      $($navItem[2]).addClass('active');
+      setTimeout(showPage, 2000);
+      break;
+    case '/business':
+      $($navItem[3]).addClass('active');
+      setTimeout(showPage, 2000);
+      // TODO
+      break;
+    case '/graduate':
+      $($navItem[4]).addClass('active');
+      setTimeout(showPage, 2000);
+      // TODO
+      break;
+    default:
+      if ($anbridges.length == 0) {
+        $anbridges = $('#anbridges_smart_phone');
+        setSpHeder();
+        setTimeout(showPage, 2000);
+      } else {
+        let video = document.querySelector('video');
+        $($navItem[0]).addClass('active');
+
+        video.oncanplaythrough = function() {
+          showPage();
+        }
+      }
+      break;
   }
-
-  // TODO
-  // showPage($anbridges);
-  // return;
-
-  let video = document.querySelector('video');
-  if (video != null) {
-    showIndex($anbridges);
-    return;
-  }
-
-  // トップ以外
-  setTimeout(showPage, 2000);
 });
 
 

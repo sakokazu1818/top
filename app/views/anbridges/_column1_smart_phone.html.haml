@@ -1,13 +1,13 @@
 .container-fluid
-  .row.col1
-    .col-12.text-left.js-text-1= 'CHANGE'
-  .row
-    .col-12.text-left.js-text-2= 'THE'
-  .row
-    .col-12.text-left.js-text-3= 'WORLD'
-  .row
-    .col-12.js-text-4= '- 未来のあるべき姿へ - '
-.container-fluid.pr-0.pl-0
+  .title-wrap
+    .row.col1
+      .col-12.text-left.text-2.js-text-1= 'CHANGE'
+    .row
+      .col-12.text-left.text-3.js-text-2= 'THE'
+    .row
+      .col-12.text-left.text-4.js-text-3= 'WORLD'
+    .row
+      .col-12.text-1.js-text-4= '- 未来のあるべき姿へ - '
+.container-fluid
   .row.mt-5
-    .col-12= video_tag 'top_video.mov', controls: false, autoplay: true,
-      muted: true, loop: true, id: 'video', class: 'img-fluid'
+    .col-12.pr-0.pl-0= image_tag 'sp_top.png', class: 'img-fluid'
