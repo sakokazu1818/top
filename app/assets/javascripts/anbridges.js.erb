@@ -1,3 +1,7 @@
+var all_img;
+var img_len;
+var loaded_counter = 0;
+
 function particles() {
   particlesJS('index-background',
     {
@@ -239,37 +243,28 @@ function loader() {
   });
 }
 
-// indexは動画ロードがトリガー
+function setLoadFunc () {
+  //すべての画像にロードイベントを設定
+  for (var i = 0; i < img_len; i ++ ) {
+    all_img[i].addEventListener("load", loadFunc );
+  }
+}
+
+function loadFunc () {
+  loaded_counter++;
+
+  if (img_len == loaded_counter) {
+    showPage();
+  }
+}
+
+// メイン処理
 $(document).on('turbolinks:load', function() {
   loader();
-  let $anbridges = $('#anbridges');
-  let $navItem = $($anbridges.find('.navbar-nav')[1]).find('.nav-item');
 
-  switch (location.pathname) {
-    case '/company':
-      break;
-    case '/misson':
-      break;
-    case '/business':
-      // TODO
-      break;
-    case '/graduate':
-      // TODO
-      break;
-    default:
-      let video = document.querySelector('video');
-      $($navItem[0]).addClass('active');
+  all_img = $("img");
+  img_len = all_img.length;
 
-      video.oncanplaythrough = function() {
-        particles();
-        showPage();
-      }
-      break;
-  }
-});
-
-// index以外は画像ロードがトリガー
-$(window).on('turbolinks:load', function() {
   let $anbridges = $('#anbridges');
   let $navItem = $($anbridges.find('.navbar-nav')[1]).find('.nav-item');
 
@@ -277,27 +272,37 @@ $(window).on('turbolinks:load', function() {
     $anbridges = $('#anbridges_smart_phone');
     setSpHeder();
     showPage();
-  }
+  } else {
+    switch (location.pathname) {
+      case '/company':
+        $($navItem[1]).addClass('active');
+        setLoadFunc();
+        break;
+      case '/misson':
+        $($navItem[2]).addClass('active');
+        setLoadFunc();
+        break;
+      case '/business':
+        $($navItem[3]).addClass('active');
+        setLoadFunc();
+        // TODO
+        break;
+      case '/graduate':
+        $($navItem[4]).addClass('active');
+        setLoadFunc();
+        // TODO
+        break;
+      default:
+        // indexは動画ロードがトリガー
+        let video = document.querySelector('video');
+        $($navItem[0]).addClass('active');
 
-  switch (location.pathname) {
-    case '/company':
-      $($navItem[1]).addClass('active');
-      showPage();
-      break;
-    case '/misson':
-      $($navItem[2]).addClass('active');
-      showPage();
-      break;
-    case '/business':
-      $($navItem[3]).addClass('active');
-      showPage();
-      // TODO
-      break;
-    case '/graduate':
-      $($navItem[4]).addClass('active');
-      showPage();
-      // TODO
-      break;
+        video.oncanplaythrough = function() {
+          particles();
+          showPage();
+        }
+        break;
+    }
   }
 });
 
