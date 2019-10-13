@@ -25,6 +25,7 @@
       - case controller.action_name
       - when 'index' then
         = render 'column1'
+        #index-background
       - when 'company' then
         .container-fluid.page-title.company-profile1= render partial: 'page_title', locals: @title
       - when 'misson' then

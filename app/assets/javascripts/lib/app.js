@@ -11,7 +11,7 @@ particlesJS.load('particles-js', 'particles.json', function() {
 
 /* Otherwise just put the config content (json): */
 
-// particlesJS('particles-js',
+// particlesJS('.index-background',
 //
 //   {
 //     "particles": {
@@ -31,14 +31,6 @@ particlesJS.load('particles-js', 'particles.json', function() {
 //           "width": 0,
 //           "color": "#000000"
 //         },
-//         "polygon": {
-//           "nb_sides": 5
-//         },
-//         "image": {
-//           "src": "img/github.svg",
-//           "width": 100,
-//           "height": 100
-//         }
 //       },
 //       "opacity": {
 //         "value": 0.5,
@@ -129,5 +121,4 @@ particlesJS.load('particles-js', 'particles.json', function() {
 //       "background_size": "cover"
 //     }
 //   }
-//
 // );

@@ -71,7 +71,7 @@ html {
 
   #anbridges {
     header {
-      z-index: 4;
+      z-index: 5;
       position: fixed;
       width: 100%;
       top: 0px;
@@ -224,118 +224,137 @@ html {
       }
     }
 
-    .content {
-      height: 50em;
+    .contents {
+      .content {
+        height: 50em;
+
+        .right {
+          z-index: 4;
+          position: relative;
+        }
+      }
+
+      .content-title1 {
+        margin-top: 4em;
+        font-size: 3em;
+        color: #fff;
+      }
+
+      .content-title2 {
+        margin-top: 4em;
+        font-size: 3em;
+        color: #fff;
+      }
+
+      .content-title3 {
+        margin-top: 4em;
+        font-size: 3em;
+        color: #fff;
+      }
+
+      .content-title4 {
+        margin-top: 4em;
+        font-size: 3em;
+        color: #fff;
+      }
+
+      .content-text {
+        font-size: 2em;
+        color: #fff;
+      }
+
+      .content-text2{
+        font-size: 1.3em;
+        color: #fff;
+        line-height: 2;
+      }
+
+      .content-title1::after {
+        position: absolute;
+        bottom: -5px;
+        left: 0.35em;
+        content: '';
+        width: 5em;
+        height: 0.2em;
+        background: #87CEFA;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform .3s;
+      }
+
+      .content-title1:hover::after {
+        transform: scale(1, 1);
+      }
+
+      .content-title2::after {
+        position: absolute;
+        bottom: -5px;
+        left: 0.35em;
+        content: '';
+        width: 3.9em;
+        height: 0.2em;
+        background: #87CEFA;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform .3s;
+      }
+
+      .content-title2:hover::after {
+        transform: scale(1, 1);
+      }
+
+      .content-title3::after {
+        position: absolute;
+        bottom: -5px;
+        left: 0.35em;
+        content: '';
+        width: 4.2em;
+        height: 0.2em;
+        background: #87CEFA;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform .3s;
+      }
+
+      .content-title3:hover::after {
+        transform: scale(1, 1);
+      }
+
+      .content-title4::after {
+        position: absolute;
+        bottom: -5px;
+        left: 0.35em;
+        content: '';
+        width: 4.2em;
+        height: 0.2em;
+        background: #87CEFA;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform .3s;
+      }
+
+      .content-title4:hover::after {
+        transform: scale(1, 1);
+      }
+
+      .more {
+        padding-top: 2em;
+        padding-bottom: 2em;
+        padding-left: 5em;
+        padding-right: 5em;
+      }
     }
 
-    .content-title1 {
-      margin-top: 4em;
-      font-size: 3em;
-      color: #fff;
-    }
-
-    .content-title2 {
-      margin-top: 4em;
-      font-size: 3em;
-      color: #fff;
-    }
-
-    .content-title3 {
-      margin-top: 4em;
-      font-size: 3em;
-      color: #fff;
-    }
-
-    .content-title4 {
-      margin-top: 4em;
-      font-size: 3em;
-      color: #fff;
-    }
-
-    .content-text {
-      font-size: 2em;
-      color: #fff;
-    }
-
-    .content-text2{
-      font-size: 1.3em;
-      color: #fff;
-      line-height: 2;
-    }
-
-    .content-title1::after {
+    #index-background {
+      background-color: #e4e4ea;
+      z-index: 3;
       position: absolute;
-      bottom: -5px;
-      left: 0.35em;
-      content: '';
-      width: 5em;
-      height: 0.2em;
-      background: #87CEFA;
-      transform: scale(0, 1);
-      transform-origin: left top;
-      transition: transform .3s;
-    }
-
-    .content-title1:hover::after {
-      transform: scale(1, 1);
-    }
-
-    .content-title2::after {
-      position: absolute;
-      bottom: -5px;
-      left: 0.35em;
-      content: '';
-      width: 3.9em;
-      height: 0.2em;
-      background: #87CEFA;
-      transform: scale(0, 1);
-      transform-origin: left top;
-      transition: transform .3s;
-    }
-
-    .content-title2:hover::after {
-      transform: scale(1, 1);
-    }
-
-    .content-title3::after {
-      position: absolute;
-      bottom: -5px;
-      left: 0.35em;
-      content: '';
-      width: 4.2em;
-      height: 0.2em;
-      background: #87CEFA;
-      transform: scale(0, 1);
-      transform-origin: left top;
-      transition: transform .3s;
-    }
-
-    .content-title3:hover::after {
-      transform: scale(1, 1);
-    }
-
-    .content-title4::after {
-      position: absolute;
-      bottom: -5px;
-      left: 0.35em;
-      content: '';
-      width: 4.2em;
-      height: 0.2em;
-      background: #87CEFA;
-      transform: scale(0, 1);
-      transform-origin: left top;
-      transition: transform .3s;
-    }
-
-    .content-title4:hover::after {
-      transform: scale(1, 1);
-    }
-
-    .more {
-      padding-top: 2em;
-      padding-bottom: 2em;
-      padding-left: 5em;
-      padding-right: 5em;
+      top: 150em;
+      left: 0px;
+      height: 220vw;
+      min-height: 124.4em;
+      max-height: 150em;
+      width: 100%;
     }
 
     .page-title {
@@ -457,6 +476,12 @@ html {
         height: 30em;
         object-fit: cover;
       }
+    }
+
+    footer {
+      z-index: 4;
+      position: relative;
+      left: 0;
     }
   }
 
@@ -690,10 +715,10 @@ html {
   }
 
   #map {
+    background-color: #FFF;
+    z-index: 4;
+    position: relative;
     height: 400px;
-    margin-left:auto;
-    margin-right:auto;
-    text-align:left;
     width: 100%;
   }
 
