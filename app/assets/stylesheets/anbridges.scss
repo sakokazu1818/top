@@ -447,6 +447,36 @@ html {
       }
     }
 
+    .page-title4 {
+      margin-top: 8em;
+      .title {
+        font-size: 6em;
+      }
+
+      .title:before {
+        content: '';
+        position: absolute;
+        left: 4%;
+        bottom: -15px;/*線の上下位置*/
+        display: inline-block;
+        width: 60px;/*線の長さ*/
+        height: 2px;/*線の太さ*/
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);/*位置調整*/
+        background-color: #dfd5ca;/*線の色*/
+        border-radius: 2px;/*線の丸み*/
+      }
+
+      .second {
+        padding-top: 3em;
+      }
+
+      .last {
+        padding-bottom: 5em;
+        border-bottom: solid 2px #dfd5ca;
+      }
+    }
+
     .company {
       background-color: #FFF;
       .content-area {
@@ -568,6 +598,42 @@ html {
         .text {
           padding-top: 1.5em;
           padding-left: 32.6em;
+        }
+      }
+    }
+
+    .recruit {
+      .title {
+        font-size: 3em;
+      }
+
+      .sub-title {
+        font-size: 2em;
+        padding-bottom: 3em;
+      }
+
+      .content {
+        padding-bottom: 5em;
+        border-bottom: solid 2px #dfd5ca;
+
+        .title {
+          font-size: 1.2em;
+        }
+
+        .text {
+          padding-left: 5.5em;
+        }
+      }
+
+      .content2 {
+        padding-bottom: 2em;
+        border-bottom: solid 2px #dfd5ca;
+
+        .title {
+          font-size: 1.2em;
+        }
+        .c {
+          color: #678da1;
         }
       }
     }

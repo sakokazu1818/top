@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/top', to: 'anbridges#index'
   get '/company', to: 'anbridges#company'
   get '/service', to: 'anbridges#service'
-  get '/graduate', to: 'anbridges#graduate'
+  get '/recruit', to: 'anbridges#recruit'
   get '/career', to: 'anbridges#career'
   get '/misson', to: 'anbridges#misson'
 

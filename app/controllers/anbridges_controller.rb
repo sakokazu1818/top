@@ -21,7 +21,7 @@ class AnbridgesController < ApplicationController
     @title = { title_ja: '事業内容', title_es: 'BUSINESS DESCRIPTION' }
   end
 
-  def graduate
+  def recruit
     @title = { title_ja: '新卒採用', title_es: 'GRADUATE RECRUITING' }
   end
 
@@ -55,7 +55,7 @@ class AnbridgesController < ApplicationController
           'ベストなマッチングを引き出す、エージェント集団です。']
          },
       { ja: 'RECRUIT', es: 'GRADUATE RECRUITING', img: 'graduate_recruiting.jpg',
-        class: 'graduate-recruiting', href: graduate_path, title: '【採用について】',
+        class: 'graduate-recruiting', href: recruit_path, title: '【採用について】',
         text: ['お客様の幅を広げ、事業を拡大中の弊社',
           '創業期ともいえる新たな挑戦を続ける今、',
           '新鮮な刺激をもたらしてくれる、新戦力を求めています。']
