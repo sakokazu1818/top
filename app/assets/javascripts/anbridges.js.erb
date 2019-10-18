@@ -244,6 +244,9 @@ function loader() {
 }
 
 function setLoadFunc () {
+  // TODO
+  setTimeout(showPage, 3000);
+
   //すべての画像にロードイベントを設定
   for (var i = 0; i < img_len; i ++ ) {
     all_img[i].addEventListener("load", loadFunc );
@@ -282,7 +285,7 @@ $(document).on('turbolinks:load', function() {
         $($navItem[2]).addClass('active');
         setLoadFunc();
         break;
-      case '/business':
+      case '/service':
         $($navItem[3]).addClass('active');
         setLoadFunc();
         // TODO

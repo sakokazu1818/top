@@ -17,7 +17,7 @@ class AnbridgesController < ApplicationController
     render :company_smart_phone, layout: 'anbridges_smart_phone.html.haml' if request.smart_phone?
   end
 
-  def business
+  def service
     @title = { title_ja: '事業内容', title_es: 'BUSINESS DESCRIPTION' }
   end
 
@@ -48,7 +48,7 @@ class AnbridgesController < ApplicationController
           '明るい未来を創造することに全力で挑戦し続けます。']
         },
       { ja: 'SERVICE', es: 'BUSINESS DESCRIPTION', img: 'business_description.jpg',
-        class: 'business-description', href: business_path, title: '【事業内容】',
+        class: 'business-description', href: service_path, title: '【事業内容】',
         text: ['中途・IT人材・アルバイトなど、様々な人材サービスを展開する',
           'Anbridge。',
           'その中で、企業と求職者の双方から話を伺い、',
