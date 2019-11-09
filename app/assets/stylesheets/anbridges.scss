@@ -372,12 +372,12 @@ html {
 
         .m-text {
           color: #FFF;
-          font-size: 1.6em;
+          font-size: 1.3em;
         }
 
         .s-text {
           color: #FFF;
-          font-size: 1.3em;
+          font-size: 1em;
         }
       }
     }
@@ -1069,6 +1069,12 @@ html {
     position: relative;
     height: 400px;
     width: 100%;
+  }
+
+  .company {
+    #map {
+      height: 40em;
+    }
   }
 
   .category-title2 {
