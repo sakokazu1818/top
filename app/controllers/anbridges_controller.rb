@@ -47,7 +47,7 @@ class AnbridgesController < ApplicationController
           '関わる全ての人に寄り添います。']
         },
       { ja: 'MISSON', es: 'GRADUATE RECRUITING', img: 'graduate_recruiting.jpg',
-        class: 'graduate-recruiting', href: misson_path, title: '未来を創造し、関わる全ての人を幸せに。',
+        class: 'headerimage', href: misson_path, title: '未来を創造し、関わる全ての人を幸せに。',
         text: ['従業員とその家族をはじめ、顧客取引先、関わる全ての人の幸せと',
           '明るい未来を創造することに全力で挑戦し続けます。']
         },

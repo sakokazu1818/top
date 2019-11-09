@@ -274,7 +274,7 @@ html {
         bottom: -5px;
         left: 0.35em;
         content: '';
-        width: 5em;
+        width: 6.5em;
         height: 0.2em;
         background: #87CEFA;
         transform: scale(0, 1);
@@ -291,7 +291,7 @@ html {
         bottom: -5px;
         left: 0.35em;
         content: '';
-        width: 3.9em;
+        width: 5.2em;
         height: 0.2em;
         background: #87CEFA;
         transform: scale(0, 1);
@@ -308,7 +308,7 @@ html {
         bottom: -5px;
         left: 0.35em;
         content: '';
-        width: 4.2em;
+        width: 5.5em;
         height: 0.2em;
         background: #87CEFA;
         transform: scale(0, 1);
@@ -325,7 +325,7 @@ html {
         bottom: -5px;
         left: 0.35em;
         content: '';
-        width: 4.2em;
+        width: 5.5em;
         height: 0.2em;
         background: #87CEFA;
         transform: scale(0, 1);
@@ -367,17 +367,17 @@ html {
         padding-left: 2em;
         .text {
           color: #FFF;
-          font-size: 4em;
+          font-size: 3em;
         }
 
         .m-text {
           color: #FFF;
-          font-size: 3em;
+          font-size: 1.6em;
         }
 
         .s-text {
           color: #FFF;
-          font-size: 2em;
+          font-size: 1.3em;
         }
       }
     }
@@ -436,13 +436,13 @@ html {
         }
 
         .low {
-          font-size: 1.4em;
-          padding-left: 6.4em;
+          font-size: 1em;
+          padding-left: 9em;
         }
 
         .right {
           height: 28em;
-          background-image: url('http://placehold.jp/250x50.png?text=モック画像');
+          background-image: url('office-2616585_1920.jpg');
           background-size: cover;
           background-position: center center;
         }
@@ -498,7 +498,6 @@ html {
 
         .title {
           font-size: 0.8em;
-          font-weight: bold;
           background-color: #f2f2f2;
           display: -webkit-flex;
           display: flex;
@@ -510,7 +509,6 @@ html {
 
         .text {
           font-size: 0.8em;
-          font-weight: normal;
           display: -webkit-flex;
           display: flex;
           -webkit-align-items: center;
@@ -590,7 +588,29 @@ html {
         left: 9em;
         height: 18em;
         width: 24em;
-        background-image: url('http://placehold.jp/250x50.png?text=モック画像');
+        background-image: url('18b50202a348c77180d2775e75bb6ba4.jpg');
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .img2 {
+        z-index: 1;
+        position: relative;
+        left: 9em;
+        height: 18em;
+        width: 24em;
+        background-image: url('37da8197a2c6cd1f89b1a813e1dbce80.jpg');
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .img3 {
+        z-index: 1;
+        position: relative;
+        left: 9em;
+        height: 18em;
+        width: 24em;
+        background-image: url('3842e3d6bb02e9d1f2eaafa62f224efa.jpg');
         background-size: cover;
         background-position: center center;
       }
@@ -847,7 +867,7 @@ html {
         height: 15em;
         right: -15px;
         top: -2em;
-        padding-top: 3em;
+        padding-top: 1em;
         padding-left: 2em;
 
         .title {
@@ -1092,5 +1112,9 @@ html {
 
   .career-opportunities {
     background-image: url('career_opportunities.jpg');
+  }
+
+  .headerimage {
+    background-image: url('headerimage-large.jpg');
   }
 }
