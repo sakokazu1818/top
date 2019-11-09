@@ -657,6 +657,7 @@ html {
       left: 0px;
       padding-top: 1em;
       background-color: #fff;
+      height: 5em;
 
       nav {
         background-color: #FFF;
@@ -771,6 +772,36 @@ html {
       }
     }
 
+    .page-title4 {
+      margin-top: 6em;
+      .title {
+        font-size: 3em;
+      }
+
+      .title:before {
+        content: '';
+        position: absolute;
+        left: 1em;
+        bottom: -15px;/*線の上下位置*/
+        display: inline-block;
+        width: 60px;/*線の長さ*/
+        height: 2px;/*線の太さ*/
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);/*位置調整*/
+        background-color: #dfd5ca;/*線の色*/
+        border-radius: 2px;/*線の丸み*/
+      }
+
+      .second {
+        padding-top: 3em;
+      }
+
+      .last {
+        padding-bottom: 3em;
+        border-bottom: solid 2px #dfd5ca;
+      }
+    }
+
     .service {
       .first {
         .first {
@@ -806,6 +837,42 @@ html {
         .title {
           font-size: 1.2em;
           line-height: 2;
+        }
+      }
+    }
+
+    .recruit {
+      .title {
+        font-size: 1.4em;
+      }
+
+      .title2 {
+        font-size: 3em;
+      }
+
+      .sub-title {
+        font-size: 1.5em;
+        padding-bottom: 3em;
+      }
+
+      .content {
+        padding-bottom: 3em;
+        border-bottom: solid 2px #dfd5ca;
+
+        .text {
+          font-size: 0.9em;
+          line-height: 2;
+        }
+
+        .sp_text {
+          font-size: 0.8em;
+        }
+      }
+
+      .flow {
+        line-height: 2;
+        .bl {
+          color: #678da1;
         }
       }
     }

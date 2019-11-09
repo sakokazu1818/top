@@ -25,6 +25,8 @@ class AnbridgesController < ApplicationController
 
   def recruit
     @title = { title_ja: '新卒採用', title_es: 'GRADUATE RECRUITING' }
+
+    render :recruit_smart_phone, layout: 'anbridges_smart_phone.html.haml' if request.smart_phone?
   end
 
   def career

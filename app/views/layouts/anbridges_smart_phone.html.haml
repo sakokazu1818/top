@@ -33,8 +33,8 @@
         .container-fluid.page-title2= render partial: 'page_title2', locals: @title
       - when 'service' then
         .container-fluid.page-title3= render partial: 'page_title3_s', locals: @title
-      - else
-        .container-fluid.page-title.company-profile1= render partial: 'page_title', locals: @title
+      - when 'recruit' then
+        .container-fluid.page-title4= render partial: 'page_title4_s', locals: @title
 
       .container-fluid= yield
     %footer
