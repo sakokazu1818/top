@@ -19,6 +19,8 @@ class AnbridgesController < ApplicationController
 
   def service
     @title = { title_ja: '事業内容', title_es: 'BUSINESS DESCRIPTION' }
+
+    render :service_smart_phone, layout: 'anbridges_smart_phone.html.haml' if request.smart_phone?
   end
 
   def recruit

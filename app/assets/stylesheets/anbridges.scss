@@ -651,7 +651,7 @@ html {
 
     header {
       width: 100%;
-      z-index: 1;
+      z-index: 2;
       position: fixed;
       top: 0px;
       left: 0px;
@@ -725,6 +725,87 @@ html {
         .text {
           color: #FFF;
           font-size: 2em;
+        }
+      }
+    }
+
+    .page-title3 {
+      width: 100%;
+      background-color: #FFF;
+      margin-top: 7em;
+      line-height: 1.5;
+
+      .first {
+        .top {
+          font-size: 1.2em;
+        }
+        .midle {
+          font-size: 3em;
+        }
+        .low {
+          font-size: 1.5em;
+        }
+      }
+
+      .right {
+        height: 14em;
+        background-image: url('http://placehold.jp/250x50.png?text=モック画像');
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        left: 1.2em;
+        top: 2.8em;
+        z-index: 1;
+      }
+
+      .second {
+        background-color: #1f3134;
+        height: 10em;
+        color: #FFF;
+        font-size: 1.3em;
+        padding-top: 3em;
+        padding-left: 2.3em;
+        line-height: 2.6;
+        position: relative;
+        right: 1.2em;
+      }
+    }
+
+    .service {
+      .first {
+        .first {
+          font-size: 1.5em;
+        }
+
+        .second {
+          font-size: 2em;
+        }
+
+        .img {
+          z-index: 1;
+          position: relative;
+          height: 5em;
+          width: 7em;
+          background-image: url('http://placehold.jp/250x50.png?text=モック画像');
+          background-size: cover;
+          background-position: center center;
+          left: 3em;
+        }
+      }
+
+      .under {
+        background-color: #1f3134;
+        color: #FFF;
+        position: relative;
+        height: 15em;
+        right: -15px;
+        top: -2em;
+        padding-top: 3em;
+        padding-left: 2em;
+
+        .title {
+          font-size: 1.2em;
+          line-height: 2;
         }
       }
     }

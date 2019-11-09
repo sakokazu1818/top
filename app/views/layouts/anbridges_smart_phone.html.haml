@@ -31,6 +31,8 @@
         .container-fluid.page-title.company-profile1= render partial: 'page_title', locals: @title
       - when 'misson' then
         .container-fluid.page-title2= render partial: 'page_title2', locals: @title
+      - when 'service' then
+        .container-fluid.page-title3= render partial: 'page_title3_s', locals: @title
       - else
         .container-fluid.page-title.company-profile1= render partial: 'page_title', locals: @title
 
