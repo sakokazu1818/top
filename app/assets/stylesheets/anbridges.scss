@@ -571,17 +571,18 @@ html {
 
         .third {
           padding-left: 9em;
-
-          .img {
-            z-index: 1;
-            position: relative;
-            height: 18em;
-            width: 24em;
-            background-image: url('http://placehold.jp/250x50.png?text=モック画像');
-            background-size: cover;
-            background-position: center center;
-          }
         }
+      }
+
+      .img {
+        z-index: 1;
+        position: relative;
+        left: 9em;
+        height: 18em;
+        width: 24em;
+        background-image: url('http://placehold.jp/250x50.png?text=モック画像');
+        background-size: cover;
+        background-position: center center;
       }
 
       .under {

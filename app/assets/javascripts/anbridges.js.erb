@@ -399,6 +399,7 @@ $(document).on('turbolinks:load', function() {
         setLoadFunc();
         break;
       case '/service':
+        $(window).fadeThis();
         $($navItem[3]).addClass('active');
         setLoadFunc();
         // TODO
