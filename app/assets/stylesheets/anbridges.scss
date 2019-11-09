@@ -267,7 +267,6 @@ html {
       .content-text2{
         font-size: 1.3em;
         color: #fff;
-        line-height: 2;
       }
 
       .content-title1::after {
@@ -365,9 +364,20 @@ html {
       .title {
         height: 30em;
         padding-top: 10em;
+        padding-left: 2em;
         .text {
           color: #FFF;
           font-size: 4em;
+        }
+
+        .m-text {
+          color: #FFF;
+          font-size: 3em;
+        }
+
+        .s-text {
+          color: #FFF;
+          font-size: 2em;
         }
       }
     }
@@ -613,6 +623,10 @@ html {
       .sub-title {
         font-size: 2em;
         padding-bottom: 3em;
+      }
+
+      .job{
+        line-height: 2;
       }
 
       .content {
