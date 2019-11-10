@@ -59,3 +59,5 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+
+server ENV['ANBRIDGE_PRODUCTION_SERVER'], user: 'deploy', roles: ['app', 'db', 'web'], my_property: :my_value
