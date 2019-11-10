@@ -147,8 +147,27 @@ html {
           }
 
           .active {
+            .nav0::after {
+              border-bottom: solid 3px #6b2470;
+            }
+
+            .nav1::after {
+              border-bottom: solid 3px #184c8e;
+            }
+
+            .nav2::after {
+              border-bottom: solid 3px #34783a;
+            }
+
+            .nav3::after {
+              border-bottom: solid 3px #e6af36;
+            }
+
+            .nav4::after {
+              border-bottom: solid 3px #c71926;
+            }
+
             a::after {
-              border-bottom: solid 3px #87CEFA;
               bottom: 0;
               content: "";
               display: block;
@@ -159,8 +178,27 @@ html {
             }
           }
 
+          .nav0::after {
+            border-bottom: solid 3px #6b2470;
+          }
+
+          .nav1::after {
+            border-bottom: solid 3px #184c8e;
+          }
+
+          .nav2::after {
+            border-bottom: solid 3px #34783a;
+          }
+
+          .nav3::after {
+            border-bottom: solid 3px #e6af36;
+          }
+
+          .nav4::after {
+            border-bottom: solid 3px #c71926;
+          }
+
           a::after {
-            border-bottom: solid 3px #87CEFA;
             bottom: 0;
             content: "";
             display: block;
