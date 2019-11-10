@@ -227,8 +227,6 @@ html {
 
     .contents {
       .content {
-        height: 50em;
-
         .right {
           z-index: 4;
           position: relative;
@@ -236,45 +234,50 @@ html {
       }
 
       .content-title1 {
-        margin-top: 4em;
-        font-size: 3em;
-        color: #fff;
-      }
-
-      .content-title2 {
-        margin-top: 4em;
-        font-size: 3em;
-        color: #fff;
-      }
-
-      .content-title3 {
-        margin-top: 4em;
-        font-size: 3em;
-        color: #fff;
-      }
-
-      .content-title4 {
-        margin-top: 4em;
-        font-size: 3em;
-        color: #fff;
-      }
-
-      .content-text {
+        position: relative;
+        left: - 0.3em;
         font-size: 2em;
         color: #fff;
       }
 
+      .content-title2 {
+        position: relative;
+        left: - 0.3em;
+        font-size: 2em;
+        color: #fff;
+      }
+
+      .content-title3 {
+        position: relative;
+        left: - 0.3em;
+        font-size: 2em;
+        color: #fff;
+      }
+
+      .content-title4 {
+        position: relative;
+        left: - 0.3em;
+        font-size: 2em;
+        color: #fff;
+      }
+
+      .content-text {
+        margin-top: 6em;
+        font-size: 1em;
+        color: #fff;
+      }
+
       .content-text2{
-        font-size: 1.3em;
+        font-size: 1em;
         color: #fff;
       }
 
       .content-title1::after {
         position: absolute;
         bottom: -5px;
-        left: 0.35em;
+        left: 0.85em;
         content: '';
-        width: 6.5em;
+        width: 6em;
         height: 0.2em;
         background: #87CEFA;
         transform: scale(0, 1);
@@ -289,9 +292,9 @@ html {
       .content-title2::after {
         position: absolute;
         bottom: -5px;
-        left: 0.35em;
+        left: 0.85em;
         content: '';
-        width: 5.2em;
+        width: 4.8em;
         height: 0.2em;
         background: #87CEFA;
         transform: scale(0, 1);
@@ -306,9 +309,9 @@ html {
       .content-title3::after {
         position: absolute;
         bottom: -5px;
-        left: 0.35em;
+        left: 0.85em;
         content: '';
-        width: 5.5em;
+        width: 5.1em;
         height: 0.2em;
         background: #87CEFA;
         transform: scale(0, 1);
@@ -323,9 +326,9 @@ html {
       .content-title4::after {
         position: absolute;
         bottom: -5px;
-        left: 0.35em;
+        left: 0.85em;
         content: '';
-        width: 5.5em;
+        width: 5.1em;
         height: 0.2em;
         background: #87CEFA;
         transform: scale(0, 1);
@@ -342,6 +345,7 @@ html {
         padding-bottom: 2em;
         padding-left: 5em;
         padding-right: 5em;
+        margin-bottom: 6em;
       }
     }
 
@@ -349,11 +353,10 @@ html {
       background-color: #e4e4ea;
       z-index: 3;
       position: absolute;
-      top: 150em;
+      top: 120em;
       left: 0px;
-      height: 220vw;
-      min-height: 124.4em;
-      max-height: 150em;
+      height: 150vw;
+      min-height: 100em;
       width: 100%;
     }
 

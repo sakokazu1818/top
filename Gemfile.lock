@@ -47,6 +47,8 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    airbrussh (1.4.0)
+      sshkit (>= 1.6.1, != 1.7.0)
     arel (7.1.4)
     ast (2.4.0)
     autoprefixer-rails (9.5.1)
@@ -55,6 +57,20 @@ GEM
     bindex (0.7.0)
     builder (3.2.3)
     byebug (11.0.1)
+    capistrano (3.11.2)
+      airbrussh (>= 1.0.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (>= 1.9.0)
+    capistrano-bundler (1.6.0)
+      capistrano (~> 3.1)
+    capistrano-rails (1.4.0)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
+    capistrano3-puma (3.1.1)
+      capistrano (~> 3.7)
+      capistrano-bundler
+      puma (~> 3.4)
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -132,6 +148,9 @@ GEM
       coffee-rails (>= 3.2.1)
       jquery-rails
       rails (>= 3.2.0)
+    net-scp (2.0.0)
+      net-ssh (>= 2.6.5, < 6.0.0)
+    net-ssh (5.2.0)
     nio4r (2.3.1)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
@@ -244,6 +263,9 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    sshkit (1.20.0)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
     sysexits (1.2.0)
     temple (0.8.1)
     thor (0.20.3)
@@ -273,6 +295,8 @@ DEPENDENCIES
   bcrypt
   bootstrap!
   byebug
+  capistrano-rails
+  capistrano3-puma
   coffee-rails (~> 4.2)
   erb2haml
   eslint-rails

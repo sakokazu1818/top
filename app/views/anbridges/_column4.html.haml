@@ -5,11 +5,11 @@
       .col-9.right{ class: n[:class] }
         .row
           .col-1
-          .col-11{ class: "content-title#{i}" }= '▪︎ ' + n[:ja]
-        .row.mt-3
-          .col-1
           .col-11.content-text= n[:title]
         .row.mt-3
+          .col-1
+          .col-11{ class: "content-title#{i}" }= '▪︎ ' + n[:ja]
+        .row.mt-4
           .col-1
           .col-10.content-text2= "#{n[:text].join('')}"
         .row.mt-5
