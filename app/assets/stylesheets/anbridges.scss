@@ -379,11 +379,48 @@ html {
       }
 
       .more {
-        padding-top: 2em;
-        padding-bottom: 2em;
-        padding-left: 5em;
-        padding-right: 5em;
+        width: 17em;
+        height: 5em;
+        padding-top: 1em;
+        margin-top: 3em;
         margin-bottom: 6em;
+
+        border: 2px solid #6b2470;
+        background-color: #FFF;
+        float:left;
+        text-align:center;
+        cursor:pointer;
+        position:relative;
+        box-sizing:border-box;
+        overflow:hidden;
+      }
+
+      .more .text{
+        font-size:16px;
+        color: #000;
+        text-decoration:none;
+        line-height:50px;
+        transition:all .5s ease;
+        z-index:2;
+        position:relative;
+      }
+
+      .eff-more{
+        width: 17em;
+        height: 5em;
+        left: -17em;
+        top: -5em;
+
+        background: #6b2470;
+        position:absolute;
+        transition:all .5s ease;
+        z-index:1;
+      }
+      .more:hover .eff-more{
+        left:0;top:0;
+      }
+      .more:hover .text{
+        color:#fff;
       }
     }
 
