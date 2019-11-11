@@ -487,7 +487,7 @@ html {
         width: 90%;
         position: relative;
         left: 10%;
-        background-image: url('misson.jpg');
+        background-image: image-url('misson.jpg');
         background-position: center 55%;
         background-size: cover;
       }
@@ -520,7 +520,7 @@ html {
 
         .right {
           height: 28em;
-          background-image: url('office-2616585_1920.jpg');
+          background-image: image-url('office-2616585_1920.jpg');
           background-size: cover;
           background-position: center center;
         }
@@ -664,7 +664,7 @@ html {
         left: 9em;
         height: 18em;
         width: 24em;
-        background-image: url('18b50202a348c77180d2775e75bb6ba4.jpg');
+        background-image: image-url('18b50202a348c77180d2775e75bb6ba4.jpg');
         background-size: cover;
         background-position: center center;
       }
@@ -675,7 +675,7 @@ html {
         left: 9em;
         height: 18em;
         width: 24em;
-        background-image: url('37da8197a2c6cd1f89b1a813e1dbce80.jpg');
+        background-image: image-url('37da8197a2c6cd1f89b1a813e1dbce80.jpg');
         background-size: cover;
         background-position: center center;
       }
@@ -686,7 +686,7 @@ html {
         left: 9em;
         height: 18em;
         width: 24em;
-        background-image: url('3842e3d6bb02e9d1f2eaafa62f224efa.jpg');
+        background-image: image-url('3842e3d6bb02e9d1f2eaafa62f224efa.jpg');
         background-size: cover;
         background-position: center center;
       }
@@ -862,7 +862,7 @@ html {
 
       .right {
         height: 14em;
-        background-image: url('http://placehold.jp/250x50.png?text=モック画像');
+        background-image: image-url('http://placehold.jp/250x50.png?text=モック画像');
         background-size: cover;
         background-position: center center;
         position: relative;
@@ -929,7 +929,7 @@ html {
           position: relative;
           height: 5em;
           width: 7em;
-          background-image: url('http://placehold.jp/250x50.png?text=モック画像');
+          background-image: image-url('http://placehold.jp/250x50.png?text=モック画像');
           background-size: cover;
           background-position: center center;
           left: 3em;
@@ -1173,30 +1173,30 @@ html {
   }
 
   .company-profile {
-    background-image: url('company_profile.jpg') !important;
+    background-image: image-url('company_profile.jpg') !important;
   }
 
   .company-profile1 {
     background-color: #ffffff;
-    background-image: url('company_profile.jpg');
+    background-image: image-url('company_profile.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
 
   .business-description {
-    background-image: url('business_description.jpg');
+    background-image: image-url('business_description.jpg');
   }
 
   .graduate-recruiting {
-    background-image: url('graduate_recruiting.jpg');
+    background-image: image-url('graduate_recruiting.jpg');
   }
 
   .career-opportunities {
-    background-image: url('career_opportunities.jpg');
+    background-image: image-url('career_opportunities.jpg');
   }
 
   .headerimage {
-    background-image: url('headerimage-large.jpg');
+    background-image: image-url('headerimage-large.jpg');
   }
 }
