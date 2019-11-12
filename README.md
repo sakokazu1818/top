@@ -36,3 +36,8 @@ $ be haml-lint .
 ```
 
 heroku run bash
+
+```
+export ANBRIDGE_PRODUCTION_SERVER=153.127.6.67
+bundle exec cap production deploy
+```
