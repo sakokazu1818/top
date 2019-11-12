@@ -694,19 +694,29 @@ html {
       .under {
         position: relative;
         top: -10em;
-        margin-left: 5em;
+        margin-left: 3em;
         background-color: #1f3134;
-        height: 13em;
         color: #FFF;
+
         .title {
-          padding-top: 3em;
+          padding-top: 2em;
           padding-left: 25em;
+          padding-right: 1em;
           font-size: 1.3em;
+          padding-bottom: 1.5em;
         }
 
         .text {
-          padding-top: 1.5em;
           padding-left: 32.6em;
+          padding-right: 1.2em;
+        }
+
+        .pb2 {
+          padding-bottom: 2em;
+        }
+
+        .pt1{
+          padding-top: 1em;
         }
       }
     }
