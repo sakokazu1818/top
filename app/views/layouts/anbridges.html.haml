@@ -27,7 +27,7 @@
         = render 'column1'
         #index-background
       - when 'company' then
-        .container-fluid.page-title.company-profile1= render partial: 'page_title', locals: @title
+        .container-fluid.page-title= render partial: 'page_title', locals: @title
       - when 'misson' then
         .container-fluid.page-title2= render partial: 'page_title2', locals: @title
       - when 'service' then

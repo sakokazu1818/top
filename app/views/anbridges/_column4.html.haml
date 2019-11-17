@@ -16,8 +16,8 @@
           .col-1
           .col-11
             %a{ href: n[:href] }
-              .more
-                .eff-more
+              .more{ class: "more-#{i}"}
+                %div{ class: "eff-more-#{i}"}
                 .text
                   = 'View More'
                   %i.fa.fa-angle-right.pl-3

@@ -148,11 +148,11 @@ html {
 
           .active {
             .nav0::after {
-              border-bottom: solid 3px #6b2470;
+              border-bottom: solid 3px #c71926;;
             }
 
             .nav1::after {
-              border-bottom: solid 3px #184c8e;
+              border-bottom: solid 3px #e6af36;
             }
 
             .nav2::after {
@@ -160,11 +160,11 @@ html {
             }
 
             .nav3::after {
-              border-bottom: solid 3px #e6af36;
+              border-bottom: solid 3px #184c8e;
             }
 
             .nav4::after {
-              border-bottom: solid 3px #c71926;
+              border-bottom: solid 3px #6b2470;
             }
 
             a::after {
@@ -179,11 +179,11 @@ html {
           }
 
           .nav0::after {
-            border-bottom: solid 3px #6b2470;
+            border-bottom: solid 3px #c71926;
           }
 
           .nav1::after {
-            border-bottom: solid 3px #184c8e;
+            border-bottom: solid 3px #e6af36;
           }
 
           .nav2::after {
@@ -191,11 +191,11 @@ html {
           }
 
           .nav3::after {
-            border-bottom: solid 3px #e6af36;
+            border-bottom: solid 3px #184c8e;
           }
 
           .nav4::after {
-            border-bottom: solid 3px #c71926;
+            border-bottom: solid 3px #6b2470;
           }
 
           a::after {
@@ -317,7 +317,7 @@ html {
         content: '';
         width: 6em;
         height: 0.2em;
-        background: #87CEFA;
+        background: #e6af36;
         transform: scale(0, 1);
         transform-origin: left top;
         transition: transform .3s;
@@ -334,7 +334,7 @@ html {
         content: '';
         width: 4.8em;
         height: 0.2em;
-        background: #87CEFA;
+        background: #34783a;
         transform: scale(0, 1);
         transform-origin: left top;
         transition: transform .3s;
@@ -351,7 +351,7 @@ html {
         content: '';
         width: 5.1em;
         height: 0.2em;
-        background: #87CEFA;
+        background: #184c8e;
         transform: scale(0, 1);
         transform-origin: left top;
         transition: transform .3s;
@@ -368,7 +368,7 @@ html {
         content: '';
         width: 5.1em;
         height: 0.2em;
-        background: #87CEFA;
+        background: #6b2470;
         transform: scale(0, 1);
         transform-origin: left top;
         transition: transform .3s;
@@ -385,7 +385,6 @@ html {
         margin-top: 3em;
         margin-bottom: 6em;
 
-        border: 2px solid #6b2470;
         background-color: #FFF;
         float:left;
         text-align:center;
@@ -405,7 +404,67 @@ html {
         position:relative;
       }
 
-      .eff-more{
+      .more-1 {
+        border: 2px solid #e6af36;
+      }
+
+      .eff-more-1{
+        width: 17em;
+        height: 5em;
+        left: -17em;
+        top: -5em;
+
+        background: #e6af36;
+        position:absolute;
+        transition:all .5s ease;
+        z-index:1;
+      }
+
+      .more-1:hover .eff-more-1{
+        left:0;top:0;
+      }
+
+      .eff-more-2{
+        width: 17em;
+        height: 5em;
+        left: -17em;
+        top: -5em;
+
+        background: #34783a;
+        position:absolute;
+        transition:all .5s ease;
+        z-index:1;
+      }
+
+      .more-2 {
+        border: 2px solid #34783a;
+      }
+
+      .more-2:hover .eff-more-2{
+        left:0;top:0;
+      }
+
+      .eff-more-3{
+        width: 17em;
+        height: 5em;
+        left: -17em;
+        top: -5em;
+
+        background: #184c8e;
+        position:absolute;
+        transition:all .5s ease;
+        z-index:1;
+      }
+
+      .more-3:hover .eff-more-3{
+        left:0;top:0;
+      }
+
+      .more-3 {
+        border: 2px solid #184c8e;
+      }
+
+      .eff-more-4{
         width: 17em;
         height: 5em;
         left: -17em;
@@ -416,9 +475,15 @@ html {
         transition:all .5s ease;
         z-index:1;
       }
-      .more:hover .eff-more{
+
+      .more-4:hover .eff-more-4{
         left:0;top:0;
       }
+
+      .more-4 {
+        border: 2px solid #6b2470;
+      }
+
       .more:hover .text{
         color:#fff;
       }
@@ -432,6 +497,7 @@ html {
       left: 0px;
       height: 150vw;
       min-height: 100em;
+      max-height: 80%;
       width: 100%;
     }
 
@@ -443,6 +509,8 @@ html {
         height: 30em;
         padding-top: 10em;
         padding-left: 2em;
+        background-image: image-url('company_profile.jpg');
+        background-attachment: fixed;
         .text {
           color: #FFF;
           font-size: 3em;
