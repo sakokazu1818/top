@@ -926,6 +926,40 @@ html {
       }
     }
 
+    .page-title2 {
+      width: 100%;
+      background-color: #FFF;
+      margin-top: 7em;
+
+      .title-1 {
+        z-index: 1;
+        padding-left: 1em;
+        margin-right: 0 !important;
+        color: #FFF;
+        background-color: #000;
+        height: 3em;
+        width: 80%;
+        font-size: 1.5em;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        position: relative;
+        top: -4em;
+      }
+
+      .title-2 {
+        z-index: 0;
+        height: 4em;
+        width: 90%;
+        position: relative;
+        left: 10%;
+        background-image: image-url('misson.jpg');
+        background-position: center 55%;
+        background-size: cover;
+      }
+    }
+
     .page-title3 {
       width: 100%;
       background-color: #FFF;

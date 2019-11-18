@@ -34,6 +34,7 @@ class AnbridgesController < ApplicationController
   end
 
   def misson
+    render :misson_smart_phone, layout: 'anbridges_smart_phone.html.haml' if request.smart_phone?
   end
 
   private
