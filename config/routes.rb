@@ -8,14 +8,5 @@ Rails.application.routes.draw do
   get '/service', to: 'anbridges#service'
   get '/recruit', to: 'anbridges#recruit'
   get '/career', to: 'anbridges#career'
-  get '/misson', to: 'anbridges#misson'
-
-  scope :admin do
-    resource :sessions, only: [:new, :create, :destroy]
-    get '/', to: 'news#index'
-
-    resources :news
-  end
-
-  resources :portal
+  get '/mission', to: 'anbridges#mission'
 end
