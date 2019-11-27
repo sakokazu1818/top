@@ -20,4 +20,4 @@
 //= require bootstrap-sprockets
 //= require_tree ./lib
 //= require_tree ./common
-//= require anbridges.js
+//= require anbridges_sp.js

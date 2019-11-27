@@ -2,119 +2,6 @@ var all_img;
 var img_len;
 var loaded_counter = 0;
 
-function particles3() {
-  particlesJS('sp-title',
-    {
-      "particles": {
-        "number": {
-          "value": 50,
-          "density": {
-            "enable": true,
-            "value_area": 400
-          }
-        },
-        "color": {
-          "value": ["#bbbbbe", "#000"]
-        },
-        "shape": {
-          "type": "edge",
-          "stroke": {
-            "width": 0,
-            "color": "#000000"
-          },
-        },
-        "opacity": {
-          "value": 0.5,
-          "random": false,
-          "anim": {
-            "enable": false,
-            "speed": 1,
-            "opacity_min": 0.1,
-            "sync": false
-          }
-        },
-        "size": {
-          "value": 20,
-          "random": true,
-          "anim": {
-            "enable": false,
-            "speed": 40,
-            "size_min": 10,
-            "sync": false
-          }
-        },
-        "line_linked": {
-          "enable": false,
-          "distance": 150,
-          "color": "#ffffff",
-          "opacity": 0.4,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 3,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out",
-          "attract": {
-            "enable": false,
-            "rotateX": 600,
-            "rotateY": 1200
-          }
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": {
-            "enable": false,
-            "mode": "repulse"
-          },
-          "onclick": {
-            "enable": false,
-            "mode": "push"
-          },
-          "resize": true
-        },
-        "modes": {
-          "grab": {
-            "distance": 400,
-            "line_linked": {
-              "opacity": 1
-            }
-          },
-          "bubble": {
-            "distance": 400,
-            "size": 40,
-            "duration": 2,
-            "opacity": 8,
-            "speed": 3
-          },
-          "repulse": {
-            "distance": 200
-          },
-          "push": {
-            "particles_nb": 4
-          },
-          "remove": {
-            "particles_nb": 2
-          }
-        }
-      },
-      "retina_detect": true,
-      "config_demo": {
-        "hide_card": false,
-        "background_color": "#b61924",
-        "background_image": "",
-        "background_position": "50% 50%",
-        "background_repeat": "no-repeat",
-        "background_size": "cover"
-      }
-    }
-  );
-}
-
 function particles2() {
   particlesJS('pc-title',
     {
@@ -405,25 +292,6 @@ function textEffect() {
   });
 }
 
-
-
-  // contents();
-
-
-function setSpHeder() {
-  $("#hamburger-menu-item").hide();
-
-  $('.hamburger-menu').on('click', function() {
-    $("#hamburger-menu-item").show( 'slide', { direction: 'right' } , 1000 );
-    $('#menu-bg').css('visibility', 'visible');
-  });
-
-  $('#menu-bg').on('click', function() {
-    $('#menu-bg').css('visibility', 'hidden');
-    $("#hamburger-menu-item").hide( 'slide', { direction: 'right' } , 1000 );
-  });
-}
-
 function loader() {
   $('#loader-bg, #loader').height($(window).height()+100).css('display','block');
   $('.loading').textillate({
@@ -469,81 +337,52 @@ function loadFunc () {
   }
 }
 
-function gMap () {
-  if ($('#map').length == 0) {
-    return false;
-  }
-
-  // 住所
-  let location = { lat: 35.703315, lng: 139.755527 };
-  let map = new google.maps.Map(document.getElementById('map'), { zoom: 15, center: location });
-
-  //google mapsインスタンス化
-  let transitLayer = new google.maps.TransitLayer();
-  transitLayer.setMap(map);
-
-  // マーカーを押したときにポップアップで出る情報
-  let contentString = '住所：東京都文京区本郷1-4-4 水道橋ビル6階';
-  let infowindow = new google.maps.InfoWindow({content: contentString});
-
-  //マーカーの実体を作る
-  let marker = new google.maps.Marker({position:location,map: map,title: contentString});
-
-  //マーカーをクリックできるようにする
-  marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  });
-}
-
 // メイン処理
 $(document).on('turbolinks:load', function() {
+  let $anbridges = $('#anbridges');
+  if ($anbridges.length < 1) {
+    return
+  }
+
   loader();
   gMap();
 
   all_img = $("img");
   img_len = all_img.length;
 
-  let $anbridges = $('#anbridges');
+
   let $navItem = $($anbridges.find('.navbar-nav')[1]).find('.nav-item');
 
-  if ($anbridges.length == 0) {
-    $anbridges = $('#anbridges_smart_phone');
-    setSpHeder();
-    $(window).fadeThis();
-    particles3();
-    showPage();
-  } else {
-    switch (location.pathname) {
-      case '/company':
-        $($navItem[1]).addClass('active');
-        setLoadFunc();
-        break;
-      case '/mission':
-        $($navItem[2]).addClass('active');
-        setLoadFunc();
-        break;
-      case '/service':
-        $(window).fadeThis();
-        $($navItem[3]).addClass('active');
-        setLoadFunc();
-        // TODO
-        break;
-      case '/recruit':
-        $($navItem[4]).addClass('active');
-        setLoadFunc();
-        // TODO
-        break;
-      default:
-        // indexは動画ロードがトリガー
-        let video = document.querySelector('video');
-        $($navItem[0]).addClass('active');
+  switch (location.pathname) {
+    case '/company':
+      $($navItem[1]).addClass('active');
+      setLoadFunc();
+      break;
+    case '/mission':
+      $($navItem[2]).addClass('active');
+      setLoadFunc();
+      break;
+    case '/service':
+      $(window).fadeThis();
+      $($navItem[3]).addClass('active');
+      setLoadFunc();
+      // TODO
+      break;
+    case '/recruit':
+      $($navItem[4]).addClass('active');
+      setLoadFunc();
+      // TODO
+      break;
+    default:
+      // indexは動画ロードがトリガー
+      let video = document.querySelector('video');
+      $($navItem[0]).addClass('active');
 
-        video.oncanplaythrough = function() {
-          particles();
-          particles2();
-          showPage();
-        }
-        break;
-    }
+      video.oncanplaythrough = function() {
+        particles();
+        particles2();
+        showPage();
+      }
+      break;
   }
 });

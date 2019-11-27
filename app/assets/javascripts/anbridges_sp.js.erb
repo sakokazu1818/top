@@ -1,0 +1,95 @@
+var all_img;
+var img_len;
+var loaded_counter = 0;
+
+function loader() {
+  $('#loader-bg, #loader').height($(window).height()+100).css('display','block');
+  $('.loading').textillate({
+      loop: true,
+      minDisplayTime: 2000,
+      autoStart: true,
+
+      // アニメーション設定(開始)
+      in: {
+        effect: 'bounce',
+        delayScale: 3,
+        delay: 50,
+        sync: false,
+        shuffle: false
+      },
+
+      // アニメーション設定(終了)
+      out: {
+        effect: 'bounce',
+        delayScale: 3,
+        delay: 50,
+        sync: false,
+        shuffle: false
+      }
+  });
+}
+
+function showPage() {
+  $('#loader-bg').delay(900).fadeOut(800);
+  $('#loader').hide();
+}
+
+function setHeder() {
+  $("#hamburger-menu-item").hide();
+
+  $('.hamburger-menu').on('click', function() {
+    $("#hamburger-menu-item").show( 'slide', { direction: 'right' } , 1000 );
+    $('#menu-bg').css('visibility', 'visible');
+  });
+
+  $('#menu-bg').on('click', function() {
+    $('#menu-bg').css('visibility', 'hidden');
+    $("#hamburger-menu-item").hide( 'slide', { direction: 'right' } , 1000 );
+  });
+}
+
+function setLoadFunc () {
+  // TODO
+  setTimeout(showPage, 8000);
+
+  //すべての画像にロードイベントを設定
+  for (var i = 0; i < img_len; i ++ ) {
+    all_img[i].addEventListener("load", loadFunc );
+  }
+}
+
+function setLoadFunc () {
+  // TODO
+  setTimeout(showPage, 8000);
+
+  //すべての画像にロードイベントを設定
+  for (var i = 0; i < img_len; i ++ ) {
+    all_img[i].addEventListener("load", loadFunc );
+  }
+}
+
+function loadFunc () {
+  loaded_counter++;
+
+  if (img_len == loaded_counter) {
+    showPage();
+  }
+}
+
+// メイン処理
+$(document).on('turbolinks:load', function() {
+  let $anbridges = $('#anbridges_smart_phone');
+  if ($anbridges.length < 1) {
+    return
+  }
+  loader();
+
+  all_img = $('img');
+  img_len = all_img.length;
+
+  gMap();
+  setHeder();
+  $(window).fadeThis();
+  spTitleParticles();
+  setLoadFunc();
+});
