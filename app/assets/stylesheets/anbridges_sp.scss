@@ -1,0 +1,360 @@
+#anbridges_smart_phone {
+  width: 100%;
+
+  header {
+    width: 100%;
+    z-index: 2;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding-top: 1em;
+    background-color: #fff;
+    height: 5em;
+
+    nav {
+      background-color: #FFF;
+      height: 3em;
+      font-size: 1em;
+
+      .navbar-brand img {
+        height: 2em;
+      }
+
+      .hamburger-menu {
+        font-size: 2em;
+        color: #000;
+      }
+    }
+  }
+
+  .title-wrap {
+    height: 10em;
+
+    .text-1, .text-2, .text-3, .text-4 {
+      color: #000;
+      font-size: 3em;
+      position: absolute;
+    }
+
+    .text-1 {
+      padding-left: 1em;
+      top: 10.5em;
+      font-size: 1.5em;
+    }
+
+    .text-2 {
+      padding-left: 0.5em;
+      top: 1.8em;
+    }
+
+    .text-3 {
+      padding-left: 0.5em;
+      top: 2.8em;
+    }
+
+    .text-4 {
+      padding-left: 0.5em;
+      top: 3.8em;
+    }
+  }
+
+  .contents {
+    color: #FFF;
+
+    .content-title1, .content-title2, .content-title3, .content-title4 {
+      margin-top: 1em;
+      font-size: 2em;
+      color: #fff;
+    }
+
+    .under1 {
+      background-color: #FFF;
+      height: 1em;
+      width: 1em;
+    }
+  }
+
+  .page-title {
+    background-color: #FFF;
+    margin-top: 8em;
+
+    .title {
+      height: 10em;
+      padding-top: 3em;
+      color: #FFF;
+      .text {
+        font-size: 2em;
+      }
+    }
+  }
+
+  .page-title2 {
+    width: 100%;
+    background-color: #FFF;
+    margin-top: 7em;
+
+    .title-1 {
+      z-index: 1;
+      padding-left: 1em;
+      margin-right: 0 !important;
+      color: #FFF;
+      background-color: #000;
+      height: 3em;
+      width: 80%;
+      font-size: 1.5em;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      position: relative;
+      top: -4em;
+    }
+
+    .title-2 {
+      z-index: 0;
+      height: 4em;
+      width: 90%;
+      position: relative;
+      left: 10%;
+      background-image: image-url('mission.jpg');
+      background-position: center 55%;
+      background-size: cover;
+    }
+  }
+
+  .page-title3 {
+    width: 100%;
+    background-color: #FFF;
+    margin-top: 7em;
+    line-height: 1.5;
+
+    .first {
+      .top {
+        font-size: 1.2em;
+      }
+      .midle {
+        font-size: 3em;
+      }
+      .low {
+        font-size: 1.5em;
+      }
+    }
+
+    .right {
+      height: 14em;
+      background-size: cover;
+      background-position: center center;
+      position: relative;
+      left: 1.2em;
+      top: 2.8em;
+      z-index: 1;
+    }
+
+    .second {
+      background-color: #1f3134;
+      height: 10em;
+      color: #FFF;
+      font-size: 1.3em;
+      padding-top: 3em;
+      padding-left: 2.3em;
+      line-height: 2.6;
+      position: relative;
+      right: 1.2em;
+    }
+  }
+
+  .page-title4 {
+    margin-top: 6em;
+    .title {
+      font-size: 3em;
+    }
+
+    .title:before {
+      content: '';
+      position: absolute;
+      left: 1em;
+      bottom: -15px;/*線の上下位置*/
+      display: inline-block;
+      width: 60px;/*線の長さ*/
+      height: 2px;/*線の太さ*/
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);/*位置調整*/
+      background-color: #dfd5ca;/*線の色*/
+      border-radius: 2px;/*線の丸み*/
+    }
+
+    .second {
+      padding-top: 3em;
+    }
+
+    .last {
+      padding-bottom: 3em;
+      border-bottom: solid 2px #dfd5ca;
+    }
+  }
+
+  .service {
+    .first {
+      .first {
+        font-size: 1.5em;
+      }
+
+      .second {
+        font-size: 2em;
+      }
+
+      .img {
+        z-index: 1;
+        position: relative;
+        height: 5em;
+        width: 7em;
+        background-size: cover;
+        background-position: center center;
+        left: 3em;
+      }
+    }
+
+    .under {
+      background-color: #1f3134;
+      color: #FFF;
+      position: relative;
+      height: 15em;
+      right: -15px;
+      top: -2em;
+      padding-top: 1em;
+      padding-left: 2em;
+
+      .title {
+        font-size: 1.2em;
+        line-height: 2;
+      }
+    }
+  }
+
+  .recruit {
+    .title {
+      font-size: 1.4em;
+    }
+
+    .title2 {
+      font-size: 3em;
+    }
+
+    .sub-title {
+      font-size: 1.5em;
+      padding-bottom: 3em;
+    }
+
+    .content {
+      padding-bottom: 3em;
+      border-bottom: solid 2px #dfd5ca;
+
+      .text {
+        font-size: 0.9em;
+        line-height: 2;
+      }
+
+      .sp_text {
+        font-size: 0.8em;
+      }
+    }
+
+    .flow {
+      line-height: 2;
+      .bl {
+        color: #678da1;
+      }
+    }
+  }
+
+  .col1 {
+    margin-top: 7em;
+  }
+
+  .mission {
+    .mission-img {
+      width: 100%;
+      height: 5em;
+      object-fit: cover;
+    }
+  }
+}
+
+.sp-footer {
+  font-size: 0.5em;
+}
+
+#hamburger-menu-item {
+  height: 100%;
+  width: 80%;
+  max-width: 16em;
+  font-size: 1em;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: 6;
+  background: #000000;
+  border: none;
+  border-radius: 0px;
+
+  ul {
+    li.border {
+      background: #000000;
+      border-color: #FFFFFF;
+
+      a {
+        color: #FFFFFF;
+      }
+    }
+
+    li {
+      background: #000000;
+      border-top-color: #FFFFFF;
+
+      a {
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  /* アイコン周り全体 */
+  .flowbtn16 {
+    border-radius: 4px;
+    display: inline-block;
+    width: 4em;
+    height: 2.3em;
+    font-size: 1em;
+    background-color: #444;
+    color: #fff;
+  }
+
+  /* ボタン内テキスト調整 */
+  .flowbtn16 div{
+    font-size: 0.5em;
+    letter-spacing: 0;
+    position: relative;
+    bottom: 5px;
+  }
+  /* ulタグの内側余白を０にする */
+  ul.snsbtniti{
+    padding-left: 0 !important;
+    padding-top: 0.2em !important;
+    margin-bottom: 0;
+  }
+  /* アイコンボタンの位置調整 */
+  .snsbtniti{
+    display: flex;
+    flex-flow: row wrap;
+  }
+  /* アイコンボタン同士の余白調整 */
+  .snsbtniti li{
+    margin-left: 0.5em;
+    text-align: center !important;
+    list-style-type: none;
+  }
+
+  .bb {
+    border-bottom: 1px;
+    border-bottom-color: #FFFFFF;
+  }
+}
