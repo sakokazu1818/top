@@ -234,8 +234,6 @@
       z-index: 1;
       height: 6em;
       width: 80%;
-      position: relative;
-      top: -23em;
       background-image: image-url('18b50202a348c77180d2775e75bb6ba4.jpg');
       background-size: cover;
       background-position: center center;
@@ -246,8 +244,6 @@
       z-index: 1;
       height: 6em;
       width: 80%;
-      position: relative;
-      top: -23em;
       background-image: image-url('37da8197a2c6cd1f89b1a813e1dbce80.jpg');
       background-size: cover;
       background-position: center center;
@@ -258,8 +254,6 @@
       z-index: 1;
       height: 6em;
       width: 80%;
-      position: relative;
-      top: -26em;
       background-image: image-url('3842e3d6bb02e9d1f2eaafa62f224efa.jpg');
       background-size: cover;
       background-position: center center;
@@ -270,6 +264,8 @@
       z-index: 0;
       background-color: #1f3134;
       color: #FFF;
+      position: relative;
+      top: -3em;
       padding-top: 6em;
       padding-left: 1em;
       padding-right: 1em;
