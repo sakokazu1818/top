@@ -3,8 +3,9 @@
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
-Rails.application.config.assets.precompile += %w( tops.css anbridges.css anbridges_sp.css portal/main.css animate.css)
-# Add additional assets to the asset load paths
+Rails.application.config.assets.precompile += %w( anbridges.css anbridges_sp.css
+  application_sp.js anbridges_sp.js animate.css)
+# Add additional assets to the asset load pathss
 # Rails.application.config.assets.paths << Emoji.images_path
 
 # Precompile additional assets.

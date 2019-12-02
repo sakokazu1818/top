@@ -3,7 +3,9 @@ var img_len;
 var loaded_counter = 0;
 
 function loader() {
-  $('#loader-bg, #loader').height($(window).height()+100).css('display','block');
+  //スクロール禁止
+  document.addEventListener('touchmove', handleTouchMove, { passive: false });
+  $('#loader-bg, #loader').height($(window).height()+500).css('display','block');
   $('.loading').textillate({
       loop: true,
       minDisplayTime: 2000,
@@ -32,6 +34,67 @@ function loader() {
 function showPage() {
   $('#loader-bg').delay(900).fadeOut(800);
   $('#loader').hide();
+  //スクロール復帰
+  document.removeEventListener('touchmove', handleTouchMove, { passive: false });
+  textEffect();
+}
+
+function textEffect() {
+  $('.js-text-1').textillate({
+      initialDelay: 500,
+      autoStart: true,
+
+      // アニメーション設定(開始)
+      in: {
+        effect: 'bounceInRight',
+        delayScale: 3,
+        delay: 50,
+        sync: false,
+        shuffle: false
+      }
+  });
+
+  $('.js-text-2').textillate({
+      initialDelay: 700,
+      autoStart: true,
+
+      // アニメーション設定(開始)
+      in: {
+        effect: 'bounceInRight',
+        delayScale: 3,
+        delay: 50,
+        sync: false,
+        shuffle: false
+      }
+  });
+
+  $('.js-text-3').textillate({
+      initialDelay: 900,
+      autoStart: true,
+
+      // アニメーション設定(開始)
+      in: {
+        effect: 'bounceInRight',
+        delayScale: 3,
+        delay: 50,
+        sync: false,
+        shuffle: false
+      }
+  });
+
+  $('.js-text-4').textillate({
+      initialDelay: 700,
+      autoStart: true,
+
+      // アニメーション設定(開始)
+      in: {
+        effect: 'bounceInRight',
+        delayScale: 3,
+        delay: 50,
+        sync: false,
+        shuffle: false
+      }
+  });
 }
 
 function setHeder() {
@@ -83,13 +146,46 @@ $(document).on('turbolinks:load', function() {
     return
   }
   loader();
+  $(window).resize(function() {
+
+  });
 
   all_img = $('img');
   img_len = all_img.length;
-
-  gMap();
   setHeder();
-  $(window).fadeThis();
-  spTitleParticles();
+
+  switch (location.pathname) {
+    case '/company':
+      $('.nav-link1').addClass('current');
+      gMap();
+      setLoadFunc();
+      break;
+    case '/mission':
+      $('.nav-link2').addClass('current');
+      setLoadFunc();
+      break;
+    case '/service':
+      $(window).fadeThis();
+      $('.nav-link3').addClass('current');
+      setLoadFunc();
+      // TODO
+      break;
+    case '/recruit':
+      $('.nav-link4').addClass('current');
+      setLoadFunc();
+      // TODO
+      break;
+    default:
+      gMap();
+      $(window).fadeThis();
+      spTitleParticles();
+      $('.nav-link0').addClass('current');
+      break;
+  }
+
   setLoadFunc();
 });
+
+function handleTouchMove(event) {
+    event.preventDefault();
+}

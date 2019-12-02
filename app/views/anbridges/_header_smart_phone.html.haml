@@ -6,13 +6,13 @@
 
 #hamburger-menu-item.ui-widget-content.ui-corner-all
   %ul.list-group.list-group-flush
-    - ([{ ja: 'TOP', href: root_path }] + @contents).each do |c|
-      %li.list-group-item.border
+    - ([{ ja: 'TOP', href: root_path }] + @contents).each_with_index do |c, i|
+      %li.list-group-item.border{ class: "nav-link#{i}" }
         %a.nav-link{:href => c[:href].present? ? c[:href] : '#'}
           = c[:ja]
     %li.list-group-item
       %a.nav-link{:href => '#'}
-        Follow
+        FOLLOW
   %ul.snsbtniti.ml-3
     %li
       %a.flowbtn16.fl_tw2{:href => "TwitterのプロフィールURL"}

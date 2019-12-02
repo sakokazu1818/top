@@ -34,6 +34,7 @@
       color: #000;
       font-size: 3em;
       position: absolute;
+      overflow: hidden;
     }
 
     .text-1 {
@@ -68,9 +69,27 @@
     }
 
     .under1 {
-      background-color: #FFF;
-      height: 1em;
-      width: 1em;
+      background-color: #e6af36;
+      height: 0.5em;
+      width: 12em;
+    }
+
+    .under2 {
+      background-color: #34783a;
+      height: 0.5em;
+      width: 12em;
+    }
+
+    .under3 {
+      background-color: #184c8e;
+      height: 0.5em;
+      width: 12em;
+    }
+
+    .under4 {
+      background-color: #6b2470;
+      height: 0.5em;
+      width: 12em;
     }
   }
 
@@ -116,7 +135,7 @@
       width: 90%;
       position: relative;
       left: 10%;
-      background-image: image-url('mission.jpg');
+      background-image: image-url('misson.jpeg');
       background-position: center 55%;
       background-size: cover;
     }
@@ -141,13 +160,13 @@
     }
 
     .right {
-      height: 14em;
+      height: 10em;
+      z-index: 1;
+      position: relative;
+      top: 2em;
+      background-image: image-url('office-2616585_1920.jpg');
       background-size: cover;
       background-position: center center;
-      position: relative;
-      left: 1.2em;
-      top: 2.8em;
-      z-index: 1;
     }
 
     .second {
@@ -194,7 +213,10 @@
   }
 
   .service {
+    overflow: hidden;
+
     .first {
+      overflow: hidden;
       .first {
         font-size: 1.5em;
       }
@@ -203,30 +225,57 @@
         font-size: 2em;
       }
 
-      .img {
-        z-index: 1;
-        position: relative;
-        height: 5em;
-        width: 7em;
-        background-size: cover;
-        background-position: center center;
-        left: 3em;
+      .third {
+        width: 100%;
       }
     }
 
+    .img {
+      z-index: 1;
+      height: 6em;
+      width: 80%;
+      position: relative;
+      top: -23em;
+      background-image: image-url('18b50202a348c77180d2775e75bb6ba4.jpg');
+      background-size: cover;
+      background-position: center center;
+      border-bottom: solid 15px #bbbbbe;
+    }
+
+    .img2 {
+      z-index: 1;
+      height: 6em;
+      width: 80%;
+      position: relative;
+      top: -23em;
+      background-image: image-url('37da8197a2c6cd1f89b1a813e1dbce80.jpg');
+      background-size: cover;
+      background-position: center center;
+      border-bottom: solid 15px #bbbbbe;
+    }
+
+    .img3 {
+      z-index: 1;
+      height: 6em;
+      width: 80%;
+      position: relative;
+      top: -26em;
+      background-image: image-url('3842e3d6bb02e9d1f2eaafa62f224efa.jpg');
+      background-size: cover;
+      background-position: center center;
+      border-bottom: solid 15px #bbbbbe;
+    }
+
     .under {
+      z-index: 0;
       background-color: #1f3134;
       color: #FFF;
-      position: relative;
-      height: 15em;
-      right: -15px;
-      top: -2em;
-      padding-top: 1em;
-      padding-left: 2em;
+      padding-top: 6em;
+      padding-left: 1em;
+      padding-right: 1em;
 
       .title {
         font-size: 1.2em;
-        line-height: 2;
       }
     }
   }
@@ -301,10 +350,6 @@
     li.border {
       background: #000000;
       border-color: #FFFFFF;
-
-      a {
-        color: #FFFFFF;
-      }
     }
 
     li {
@@ -312,7 +357,37 @@
       border-top-color: #FFFFFF;
 
       a {
-        color: #FFFFFF;
+        color: #FFF;
+      }
+    }
+
+    .nav-link0.current {
+      a {
+        color: #c71926;
+      }
+    }
+
+    .nav-link1.current {
+      a {
+        color: #e6af36;
+      }
+    }
+
+    .nav-link2.current {
+      a {
+        color: #34783a;
+      }
+    }
+
+    .nav-link3.current {
+      a {
+        color: #184c8e;
+      }
+    }
+
+    .nav-link4.current {
+      a {
+        color: #6b2470;
       }
     }
   }

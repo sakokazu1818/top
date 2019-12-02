@@ -4,8 +4,8 @@
       .col-12{ class: n[:class] }
         .row
           .col-12{ class: "content-title#{i}" }= n[:ja]
-        .row.slide-left{"data-plugin-options" => '{"offset": -50, "speed": 1500}'}
-          .col-12{ class: "under#{i}" }
+        .slide-left{"data-plugin-options" => '{"offset": 0, "speed": 500}'}
+          %div{ class: "under#{i}" }
         .row.mt-3.mb-2
           .col-12.content-text= n[:title]
         - n[:text].each do |t|
