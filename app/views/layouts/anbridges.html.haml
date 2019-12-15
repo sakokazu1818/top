@@ -1,19 +1,20 @@
 !!!
 %html
   %head
-    %meta{ content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type' }/
-    %meta{ content: 'width=device-width, initial-scale=1, shrink-to-fit=no', name: 'viewport'}/
-    %meta{:content => "no-cache", :name => "turbolinks-cache-control"}/
-    %meta{:content => "転職、就職なら株式会社アンブリッジ(株式会社Anbride)、面接サポートや履歴書添削も無料、あなたの転職をサポートします", :name => "Description"}/
-    %meta{:content => "2BBzQhFS0bht0mE0tAnTKR_vPj3LKbj1ZULEeUhhKnE", :name => "google-site-verification"}/
+    %meta{ content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type' }
+    %meta{ content: 'width=device-width, initial-scale=1, shrink-to-fit=no', name: 'viewport'}
+    %meta{ content: 'no-cache', name: 'turbolinks-cache-control' }
+    %meta{ content: '転職、就職なら株式会社アンブリッジ(株式会社Anbride)、面接サポートや履歴書添削も無料、あなたの転職をサポートします', name: 'Description'}
+    %meta{ content: '2BBzQhFS0bht0mE0tAnTKR_vPj3LKbj1ZULEeUhhKnE', name: 'google-site-verification' }
 
     %title 株式会社アンブリッジ(株式会社Anbride)
-    %link{:href => "https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700&subset=japanese", :rel => "stylesheet"}/
+    %link{ href: 'https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700&subset=japanese', rel: 'stylesheet' }
     = favicon_link_tag
-    = javascript_include_tag "https://maps.google.com/maps/api/js?key=AIzaSyBIWFzNYwmqEZ08DPLUhqaNKiZ9H154G2o&language=ja"
     = csrf_meta_tags
-    = stylesheet_link_tag  "anbridges", :media => "all"
-    = stylesheet_link_tag  "animate", :media => "all"
+
+    = javascript_include_tag 'https://maps.google.com/maps/api/js?key=AIzaSyBIWFzNYwmqEZ08DPLUhqaNKiZ9H154G2o&language=ja'
+    = stylesheet_link_tag 'anbridges', media: 'all'
+    = stylesheet_link_tag 'animate', media: 'all'
     = javascript_include_tag 'application'
 
   %body
@@ -25,22 +26,22 @@
             .col-12.text-center.loading NowLoading...
     .main{ id: "#{controller.controller_name}" }
       - case controller.action_name
-      - when 'index' then
+      - when 'index'
         = render 'column1'
         #index-background
-      - when 'company' then
+      - when 'company'
         .container-fluid.page-title= render partial: 'company_title', locals: @title
-      - when 'mission' then
+      - when 'mission'
         .container-fluid.page-title2= render partial: 'page_title2', locals: @title
-      - when 'service' then
+      - when 'service'
         .container-fluid.page-title3= render partial: 'page_title3'
-      - when 'recruit' then
+      - when 'recruit'
         .container-fluid.page-title4= render partial: 'page_title4'
 
       .container-fluid= render 'header'
+
       = yield
-      .container-fluid
-        %footer
-          .row
-            .col-12
-              = render 'footer'
+
+      %footer.container-fluid
+        .row
+          .col-12= render 'footer'
