@@ -333,10 +333,28 @@ html {
     }
 
     .mission {
+      .title-en {
+        color: #f2f2f2;
+        font-size: 3em;
+      }
+
+      .title-ja {
+        color: #000;
+        font-size: 1em;
+        z-index: 1;
+        position: relative;
+        top: -2em;
+        left: 0.5em;
+      }
+
       .mission-img {
         width: 100%;
         height: 5em;
         object-fit: cover;
+      }
+
+      .content-title {
+        font-size: 1.2em;
       }
     }
   }
