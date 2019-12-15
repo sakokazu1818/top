@@ -7,29 +7,6 @@
   src: font-url("Nexa-Bold.otf") format("opentype");
 }
 
-@font-face {
-  font-family: "Nexa-l";
-  src: font-url("Nexa-Light.otf") format("opentype");
-}
-
-/* latin-ext */
-@font-face {
-  font-family: 'Krona One';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Krona One'), local('KronaOne-Regular'), url(https://fonts.gstatic.com/s/kronaone/v8/jAnEgHdjHcjgfIb1ZcUyOIWg_8a0Wy2V.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Krona One';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Krona One'), local('KronaOne-Regular'), url(https://fonts.gstatic.com/s/kronaone/v8/jAnEgHdjHcjgfIb1ZcUyNoWg_8a0Ww.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-
 body,
 html {
   font-family: 'Nexa-B', 'Noto Sans JP', 'MS PGothic', serif;
@@ -693,7 +670,6 @@ html {
       }
 
       .content-text {
-        font-family: 'Noto Sans JP', 'MS PGothic', serif;
         font-weight: bold;
         font-size: 1.1em;
       }
@@ -863,59 +839,6 @@ html {
     z-index: 4;
   }
 
-  .sf-container {
-    margin-left: 20px;
-    max-width: 940px;
-
-    .col-2-title {
-      font-size: 4em;
-    }
-
-    .col-2-title-en {
-      font-size: 2em;
-    }
-
-    .news-title {
-      font-size: 2em;
-    }
-
-    .news-text {
-      font-size: 2em;
-    }
-
-    .news_more {
-      font-size: 3em;
-    }
-
-    .content-text-ja {
-      font-size: 3em;
-      padding-top: 1.5em;
-    }
-
-    .content-text-en {
-      font-size: 1.5em;
-    }
-
-    .icon-sp {
-      padding-top: 1.8em;
-      font-size: 3em;
-    }
-  }
-
-  .b-u {
-    border: solid #c0c0c0;
-    border-width: 0px 0px 0.2px 0px;
-  }
-
-  .new_more {
-    border: solid #000000;
-    border-width: 2px 2px 2px 2px;
-
-    a {
-      color: #000000;
-    }
-  }
-
   #map {
     background-color: #FFF;
     z-index: 4;
@@ -930,37 +853,13 @@ html {
     }
   }
 
-  .category-title2 {
-    background-color: #FFFFFF;
-    background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #000000), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #000000),color-stop(.75, #000000), color-stop(.75, transparent),to(transparent));
-    -webkit-background-size: 5px 5px;
-  }
-
-  .text-category-title2 {
-    font-size: 200%;
-  }
-
-  .news-at {
-    width: 35%;
-  }
-
   .tag {
     background-color: #000;
     color: #FFF;
   }
-
   .company-profile {
     background-image: image-url('company_profile.jpg') !important;
   }
-
-  .company-profile1 {
-    background-color: #ffffff;
-    background-image: image-url('company_profile.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-
   .business-description {
     background-image: image-url('business_description.jpg');
   }
