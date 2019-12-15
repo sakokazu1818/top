@@ -148,26 +148,31 @@ $(document).on('turbolinks:load', function() {
     case '/company':
       $('.nav-link1').addClass('current');
       gMap();
+      setLoadFunc();
       break;
     case '/mission':
       $('.nav-link2').addClass('current');
+      setLoadFunc();
       break;
     case '/service':
       $(window).fadeThis();
       $('.nav-link3').addClass('current');
+      setLoadFunc();
+      // TODO
       break;
     case '/recruit':
       $('.nav-link4').addClass('current');
+      setLoadFunc();
+      // TODO
       break;
     default:
       gMap();
       $(window).fadeThis();
       spTitleParticles();
       $('.nav-link0').addClass('current');
+      setLoadFunc();
       break;
   }
-
-  setLoadFunc();
 });
 
 function handleTouchMove(event) {
