@@ -378,7 +378,7 @@ $(document).on('turbolinks:load', function() {
       let video = document.querySelector('video');
       $($navItem[0]).addClass('active');
 
-      video.oncanplaythrough = function() {
+      video.oncanplay = function() {
         particles();
         particles2();
         showPage();
