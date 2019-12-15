@@ -121,16 +121,6 @@ function setLoadFunc () {
   }
 }
 
-function setLoadFunc () {
-  // TODO
-  setTimeout(showPage, 8000);
-
-  //すべての画像にロードイベントを設定
-  for (var i = 0; i < img_len; i ++ ) {
-    all_img[i].addEventListener("load", loadFunc );
-  }
-}
-
 function loadFunc () {
   loaded_counter++;
 
@@ -158,22 +148,16 @@ $(document).on('turbolinks:load', function() {
     case '/company':
       $('.nav-link1').addClass('current');
       gMap();
-      setLoadFunc();
       break;
     case '/mission':
       $('.nav-link2').addClass('current');
-      setLoadFunc();
       break;
     case '/service':
       $(window).fadeThis();
       $('.nav-link3').addClass('current');
-      setLoadFunc();
-      // TODO
       break;
     case '/recruit':
       $('.nav-link4').addClass('current');
-      setLoadFunc();
-      // TODO
       break;
     default:
       gMap();
