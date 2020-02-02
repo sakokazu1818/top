@@ -130,7 +130,7 @@ function loadFunc () {
 }
 
 // メイン処理
-$(document).on('turbolinks:load', function() {
+$(document).ready(function(){
   let $anbridges = $('#anbridges_smart_phone');
   if ($anbridges.length < 1) {
     return
