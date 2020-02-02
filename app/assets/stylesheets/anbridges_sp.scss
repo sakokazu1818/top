@@ -245,6 +245,10 @@ html {
 
         .third {
           width: 100%;
+
+          .text {
+            font-size: 0.8em;
+          }
         }
       }
 
@@ -289,7 +293,10 @@ html {
         padding-right: 1em;
 
         .title {
-          font-size: 1.2em;
+          font-size: 1em;
+        }
+        .text {
+          font-size: 0.8em;
         }
       }
     }
@@ -306,6 +313,14 @@ html {
       .sub-title {
         font-size: 1.5em;
         padding-bottom: 3em;
+      }
+
+      .recruitName {
+        font-size: 0.9em;
+      }
+
+      .recruitDetails {
+        font-size: 0.8em;
       }
 
       .content {
